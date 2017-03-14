@@ -15,11 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Auth::routes();
 
-// Route to login form
-Route::get('/login', 'LoginController@index')->name('login');
+Route::get('/home', 'HomeController@index');
 
-// Route to process form
-Route::post('/login', 'LoginController@doLogin');
+Route::get('auth/facebook', 'Auth\RegisterController@redirectToProvider');
 
-Route::post('/login', 'LoginController@doLogout');
+Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCallback');

@@ -35,4 +35,10 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
 
+    'facebook' => [
+        'client_id' => '381217792258113',
+        'client_secret' => '15c0126155184f24b73531a38c8ffbe5',
+        'redirect' => 'http://localhost/ProjektSiPV/gotchange/public/auth/facebook/callback',
+    ],
+
 ];
