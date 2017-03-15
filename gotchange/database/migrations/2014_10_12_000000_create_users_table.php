@@ -18,9 +18,9 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->string('password');
-            $table->biginteger('fb_id')->unique();
-            $table->float('lat');
-            $table->float('lang');
+            $table->biginteger('fb_id')->unique()->nullable();
+            $table->float('lat')->nullable();
+            $table->float('lang')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

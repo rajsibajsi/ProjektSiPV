@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ config('app.locale') }}">
     <head>
-        <link rel="icon" type="image/png" href="../logo/icon.png">
+        <link rel="icon" type="image/png" href="{{ asset('img/favicon-32x32.png') }}">
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -91,7 +91,7 @@
         <div class="flex-center position-ref full-height">
             <a href="{{ url('/') }}">
                 <div class="top-left">
-                    <img id="brand" src="../Logo/logo.png">
+                    <img id="brand" src="{{ asset('img/logo.png') }}">
                 </div>
             </a>
             @if (Route::has('login'))
