@@ -89,7 +89,11 @@ class RegisterController extends Controller
     {
         $user = Socialite::driver('facebook')->user();
 
-        return $user->getEmail();
+        DB::table('users')->insert(
+            ['name' => $user->getName(), 'email' => $user->getEmail(), 'fb_id' => $user->getId()]
+        );
+
+        return view('home');
 
         // $user->token;
         /*
