@@ -10,7 +10,7 @@
 }
 
 .fbButton {
-	min-width: 400px;
+	min-width: 100px;
 	min-height: 60px;
 	background-color: #3b5998;
 	color white;
@@ -27,4 +27,4 @@
 	text-align: left;
 }
 
- 
+
