@@ -1,8 +1,21 @@
 /* Used for custom styling */
-#titleUnderline {
-	max-width: 200px;
-	padding-left: 150px;
-	padding-right: 150px;
+#titleUnderlineLogin {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 600px;
+	padding-left: 300px;
+	padding-right: 300px;
 	padding-bottom: 10px;
 	border-top: 1px solid #636b6f;
+}
+
+.fbButton {
+	min-width: 400px;
+	min-height: 60px;
+	background-color: #3b5998;
+	color white;
+	font-weight: 600;
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
 }
