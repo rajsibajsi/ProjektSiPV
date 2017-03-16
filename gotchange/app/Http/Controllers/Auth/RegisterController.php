@@ -99,7 +99,7 @@ class RegisterController extends Controller
  
         Auth::login($authUser, true);
  
-        return redirect()->route('home');
+        return view('home');
     }
  
     /**
