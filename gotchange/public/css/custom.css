@@ -1,0 +1,8 @@
+/* Used for custom styling */
+#titleUnderline {
+	max-width: 200px;
+	padding-left: 150px;
+	padding-right: 150px;
+	padding-bottom: 10px;
+	border-top: 1px solid #636b6f;
+}
