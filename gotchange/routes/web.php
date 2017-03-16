@@ -19,6 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 
+/* FB Auth */
 Route::get('auth/facebook', 'Auth\RegisterController@redirectToProvider');
 
 Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCallback');
+
+/* Profile */
+Route::get('profile', 'ProfileController@index');
+
