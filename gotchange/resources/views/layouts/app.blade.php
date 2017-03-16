@@ -10,7 +10,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Got Change?') }}</title>
+    <!-- <title>{{ config('app.name', 'Got Change?') }}</title>-->
+    <title>{{ Auth::user()->name }}</title>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
