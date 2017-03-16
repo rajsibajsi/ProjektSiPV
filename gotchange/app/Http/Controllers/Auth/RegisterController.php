@@ -129,7 +129,7 @@ class RegisterController extends Controller
         return User::create([
             'name' => $facebookUser->name,
             'email' => $facebookUser->email,
-            'facebook_id' => $facebookUser->id,
+            'fb_id' => $facebookUser->id,
             'avatar' => $facebookUser->avatar
         ]);
     }
