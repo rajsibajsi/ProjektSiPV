@@ -89,13 +89,18 @@ class RegisterController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('facebook')->user();
+
+        try {
+            $user = Socialite::driver('facebook')->user();
+        } catch (Exception $e) {
+            return redirect('auth/facebook');
+        }
 
         /*DB::table('users')->insert(
             ['name' => $user->getName(), 'email' => $user->getEmail(), 'fb_id' => $user->getId()]
         );*/
 
-	$authUser = $this->findOrCreateUser($user);
+	    $authUser = $this->findOrCreateUser($user);
         Auth::login($authUser, true);
 
         return view('home');
