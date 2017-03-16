@@ -122,7 +122,7 @@ class RegisterController extends Controller
 
     private function findOrCreateUser($facebookUser)
     {
-        $authUser = User::where('fb_id', $facebookUser->id)->first();
+        $authUser = User::where('email', $facebookUser->email)->first();
         if ($authUser){
             return $authUser;
         }
