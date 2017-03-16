@@ -25,5 +25,5 @@ Route::get('auth/facebook', 'Auth\RegisterController@redirectToProvider');
 Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCallback');
 
 /* Profile */
-Route::get('profile', 'ProfileController@index');
+Route::get('profile', 'ProfileController@index')->name("profile");
 
