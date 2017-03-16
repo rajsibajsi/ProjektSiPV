@@ -1,7 +1,7 @@
 /* Used for custom styling */
 #titleUnderlineLogin {
-	margin-left: auto;
-	margin-right: auto;
+	display: inline-block;
+	text-align: center;
 	max-width: 600px;
 	padding-left: 300px;
 	padding-right: 300px;
@@ -16,6 +16,14 @@
 	color white;
 	font-weight: 600;
 	border-radius: 5px;
-	margin-left: auto;
-	margin-right: auto;
+	text-decoration: none;
 }
+
+.panel-body {
+	text-align: center;
+}
+
+.form-horizontal {
+	text-align: left;
+}
+
