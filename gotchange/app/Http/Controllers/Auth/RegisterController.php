@@ -103,7 +103,7 @@ class RegisterController extends Controller
 	    $authUser = $this->findOrCreateUser($user);
         Auth::login($authUser, true);
 
-        return redirect()->view('home');
+        return view('home');
 
         // $user->token;
         /*
