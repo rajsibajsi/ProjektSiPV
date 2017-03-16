@@ -61,9 +61,9 @@
                         </div>
                     </form>
                     <span id="titleUnderlineLogin"></span> 
-                    <div id="facebook-login-btb">
-                      <a class="btn btn-info" role="button" href="{{ url('/auth/facebook') }}">Login with <span>facebook</span></a>
-                    </div> 
+                    <a href="{{ url('/auth/facebook/callback') }}">
+                        <div class="fbButton">Login with Facebook</div>
+                    </a>
                 </div>
             </div>
         </div>

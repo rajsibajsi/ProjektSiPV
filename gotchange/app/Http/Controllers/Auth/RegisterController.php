@@ -7,8 +7,6 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Socialite;
-use DB;
-use Auth;
 
 class RegisterController extends Controller
 {
@@ -89,21 +87,9 @@ class RegisterController extends Controller
      */
     public function handleProviderCallback()
     {
+        $user = Socialite::driver('facebook')->user();
 
-        try {
-            $user = Socialite::driver('facebook')->user();
-        } catch (Exception $e) {
-            return redirect('auth/facebook');
-        }
-
-        /*DB::table('users')->insert(
-            ['name' => $user->getName(), 'email' => $user->getEmail(), 'fb_id' => $user->getId()]
-        );*/
-
-	    $authUser = $this->findOrCreateUser($user);
-        Auth::login($authUser, true);
-
-        return redirect(route('home'));;
+        return $user->getEmail();
 
         // $user->token;
         /*
@@ -117,20 +103,6 @@ class RegisterController extends Controller
          *$user->getName();
          *$user->getEmail();
          *$user->getAvatar();
-        */
-    }
-
-    private function findOrCreateUser($facebookUser)
-    {
-        $authUser = User::where('email', $facebookUser->email)->first();
-        if ($authUser){
-            return $authUser;
-        }
-        return User::create([
-            'name' => $facebookUser->name,
-            'email' => $facebookUser->email,
-            'fb_id' => $facebookUser->id,
-            'avatar' => $facebookUser->avatar
-        ]);
+         */
     }
 }
