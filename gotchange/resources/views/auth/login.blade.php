@@ -60,8 +60,8 @@
                             </div>
                         </div>
                     </form>
-                    <span id="titleUnderlineLogin"></span>
-                    <a href="{{ url('/facebook') }}"></a>
+                    <span id="titleUnderlineLogin"></span> 
+                    <a class="fbButton" href="{{ url('/facebook') }}">Login with Facebook</a>
                 </div>
             </div>
         </div>
