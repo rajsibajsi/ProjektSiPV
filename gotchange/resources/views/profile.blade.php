@@ -14,7 +14,7 @@
                     @if (Auth::user()->lat)
                         <a roll="button" class="btn btn-link" href="#">See Location</a>
                     @else
-                        <a roll="button" class="btn btn-link" href="#">Add Location</a>
+                        <a roll="button" class="btn btn-link" href="{{ url(/locationSelector) }}">Add Location</a>
                     @endif
                 </div>
             </div>
