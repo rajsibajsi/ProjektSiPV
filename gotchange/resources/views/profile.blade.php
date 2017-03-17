@@ -21,7 +21,7 @@
         </div>
     </div>
     <div class="col-sm-9">
-        <div class="row">
+        <div id="profileTitle" class="row">
             <h2>Album</h2>
         </div>
         <div class="col-sm-12">

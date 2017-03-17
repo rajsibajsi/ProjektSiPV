@@ -17,4 +17,11 @@
 	text-align: left;
 }
 
- 
+#profileTitle {
+	padding-bottom: 10px;
+	border-bottom: 1px solid #756e7c;
+}
+
+#profileTitle h2 {
+	float: right;
+}

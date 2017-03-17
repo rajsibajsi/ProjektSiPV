@@ -9,4 +9,8 @@ class ProfileController extends Controller
     public function index() {
     	return view("profile");
     }
+
+    public function goToLocation() {
+    	return view("locationSelector");
+    }
 }
