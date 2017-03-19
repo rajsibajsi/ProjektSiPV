@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div style="min-height: 400px; padding-bottom: 20px;" id="map"></div>
+    <div style="min-height: 400px; margin-bottom: 20px;" id="map"></div>
     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
 
@@ -23,6 +23,9 @@
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <button id="goToMap" class="btn btn-primary">
+                    Go to
+                </button>
+                <button id="save" class="btn btn-secondary">
                     Save
                 </button>
             </div>
