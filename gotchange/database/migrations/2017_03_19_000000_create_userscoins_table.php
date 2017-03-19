@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCoinsTable extends Migration
+class CreateUsersCoinsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateCoinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coins', function (Blueprint $table) {
+        Schema::create('users_coins', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->string('name')->nullable();
-            $table->float('weight')->nullable();
+            $table->string('id_user')->nullable(); /*Foreign key for user*/
+            $table->float('id_coin')->nullable(); /*Foreign key for coin name and propreties*/
         });
     }
 
@@ -27,6 +27,6 @@ class CreateCoinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coins');
+        Schema::dropIfExists('users_coins');
     }
 }
