@@ -23,5 +23,7 @@ class ProfileController extends Controller
 		$User->lang = $request->input('lang');
 
 		$User->save();
+
+		return view("profile");
     }
 }
