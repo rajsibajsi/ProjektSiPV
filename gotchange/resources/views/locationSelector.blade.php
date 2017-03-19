@@ -58,8 +58,8 @@
                     map: resultsMap,
                     position: results[0].geometry.location
                 });
-                $("#lat").value(results[0].geometry.location.lat());
-                $("#lng").value(results[0].geometry.location.lng());
+                $("#lat").val(results[0].geometry.location.lat());
+                $("#lng").val(results[0].geometry.location.lng());
             } else {
                 alert('Geocode was not successful for the following reason: ' + status);
             }
