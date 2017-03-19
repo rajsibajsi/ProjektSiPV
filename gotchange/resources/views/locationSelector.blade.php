@@ -2,6 +2,7 @@
 
 @section('content')
 <div class="container">
+    <div style="min-height: 400px;" id="map"></div>
     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
 
@@ -21,13 +22,12 @@
 
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
-                <button id="submit" class="btn btn-primary">
+                <button id="goToMap" class="btn btn-primary">
                     Save
                 </button>
             </div>
         </div>
     </form>
-    <div style="min-height: 400px;" id="map"></div>
     <script>
       function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -36,7 +36,7 @@
         });
         var geocoder = new google.maps.Geocoder();
 
-        document.getElementById('submit').addEventListener('click', function() {
+        document.getElementById('goToMap').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
         });
       }
