@@ -43,7 +43,7 @@
     	var lang = $("#oldLang").val();
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
-            center: {lat: lat, lng: lang}
+            center: {lat: parseFloat(lat), lng: parseFloat(lang)}
         });
         var geocoder = new google.maps.Geocoder();
 
