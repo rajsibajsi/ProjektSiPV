@@ -28,11 +28,11 @@
                 <button type="submit" id="save" class="btn btn-secondary">
                     Save
                 </button>
-                
+
             </div>
         </div>
         <input type="hidden" name="lat" id="lat">
-        <input type="hidden" name="lng" id="lng">
+        <input type="hidden" name="lang" id="lang">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </form>
     <script>
@@ -61,7 +61,7 @@
                     position: results[0].geometry.location
                 });
                 $("#lat").val(results[0].geometry.location.lat());
-                $("#lng").val(results[0].geometry.location.lng());
+                $("#lang").val(results[0].geometry.location.lng());
             } else {
                 alert('Geocode was not successful for the following reason: ' + status);
             }
