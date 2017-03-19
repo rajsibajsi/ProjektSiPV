@@ -28,6 +28,7 @@
                 <button type="submit" id="save" class="btn btn-secondary">
                     Save
                 </button>
+                
             </div>
         </div>
         <input type="hidden" name="lat" id="lat">
