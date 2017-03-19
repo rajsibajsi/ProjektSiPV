@@ -45,6 +45,11 @@
             zoom: 10,
             center: {lat: parseFloat(lat), lng: parseFloat(lang)}
         });
+        var latlng = new google.maps.LatLng(parseFloat(lat), parseFloat(lang));
+        var marker = new google.maps.Marker({
+            map: map,
+            position: latlng
+        });
         var geocoder = new google.maps.Geocoder();
 
         document.getElementById('goToMap').addEventListener('click', function() {
