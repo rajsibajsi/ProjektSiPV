@@ -14,19 +14,11 @@ class ProfileController extends Controller
     	return view("locationSelector");
     }
 
-    public function saveLocation() {
-    	if(Request::ajax()) {
-	      	$data = Input::all();
-	      	print_r($data);die;
+    public function saveLocation(Request $request) {
+	    $User = App\User::where('email', Auth::user()->email);
+		$User->lat = $request->input('lat');
+		$User->lng = $request->input('lng');
 
-	      	$User = App\User::where('email', Auth::user()->email);
-			$User->lat = $data['lat'];
-			$User->lng = $data['lng'];
-
-			$User->save();
-	    }
-	    else {
-	    	echo "Nope.";
-	    }
+		$User->save();
     }
 }

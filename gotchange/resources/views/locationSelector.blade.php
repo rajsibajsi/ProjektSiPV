@@ -30,14 +30,11 @@
                 </button>
             </div>
         </div>
+        <input type="hidden" name="lat" id="lat">
+        <input type="hidden" name="lng" id="lng">
+        <input type="hidden" name="_token" value="{{ csrf_token() }}">
     </form>
     <script>
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-
     var positionObject;
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -61,18 +58,8 @@
                     map: resultsMap,
                     position: results[0].geometry.location
                 });
-                positionObject = {
-                    lat: results[0].geometry.location.lat(),
-                    lng: results[0].geometry.location.lng()
-                };
-                $.ajax({
-                    url: 'addLocation',
-                    type: "post",
-                    data: positionObject,
-                    success: function(data){
-                        alert(data);
-                    }
-                }); 
+                $("#lat").value(results[0].geometry.location.lat());
+                $("#lng").value(results[0].geometry.location.lng());
             } else {
                 alert('Geocode was not successful for the following reason: ' + status);
             }
