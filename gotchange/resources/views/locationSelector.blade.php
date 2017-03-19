@@ -47,6 +47,11 @@
     }
 
     function geocodeAddress(geocoder, resultsMap) {
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
             if (status === 'OK') {
@@ -60,9 +65,6 @@
                     lng: results[0].geometry.location.lng()
                 };
                 $.ajax({
-                    headers: {
-                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-                    },
                     url: 'addLocation',
                     type: "post",
                     data: positionObject,
