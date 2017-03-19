@@ -32,6 +32,12 @@
         </div>
     </form>
     <script>
+    $.ajaxSetup({
+        headers: {
+            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+        }
+    });
+
     var positionObject;
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
@@ -47,11 +53,6 @@
     }
 
     function geocodeAddress(geocoder, resultsMap) {
-        $.ajaxSetup({
-            headers: {
-                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-            }
-        });
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
             if (status === 'OK') {
