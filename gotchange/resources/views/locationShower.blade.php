@@ -39,10 +39,11 @@
     </form>
     <script>
     function initMap() {
-    	console.log($("#oldLat").val() + ", " + $("#oldLang").val());
+    	var lat = $("#oldLat").val();
+    	var lang = $("#oldLang").val();
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
-            center: {lat: 46.559437, lng: 15.639228}
+            center: {lat: lat, lng: lang}
         });
         var geocoder = new google.maps.Geocoder();
 
