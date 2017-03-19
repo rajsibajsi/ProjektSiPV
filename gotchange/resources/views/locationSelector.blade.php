@@ -63,7 +63,7 @@
                     headers: {
                         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
                     },
-                    url: 'profile/locationSelector',
+                    url: 'addLocation',
                     type: "post",
                     data: positionObject,
                     success: function(data){

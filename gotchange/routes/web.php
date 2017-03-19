@@ -30,4 +30,4 @@ Route::get('profile', 'ProfileController@index')->name("profile");
 Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("goToLocation");
 //AIzaSyC3eL-GsH6hRmRWt9cwYJrONLkGcJCdrxQ
 
-Route::post('profile/locationSelector', 'ProfileController@saveLocation')->name("addLocation");
+Route::post('profile/addLocation', 'ProfileController@saveLocation')->name("addLocation");
