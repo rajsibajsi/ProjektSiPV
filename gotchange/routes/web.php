@@ -28,4 +28,5 @@ Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCall
 Route::get('profile', 'ProfileController@index')->name("profile");
 
 Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("addLocation");
+//AIzaSyC3eL-GsH6hRmRWt9cwYJrONLkGcJCdrxQ
 
