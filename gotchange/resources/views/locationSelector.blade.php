@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container">
-    <div style="min-height: 400px;" id="map"></div>
+    <div style="min-height: 400px; padding-bottom: 20px;" id="map"></div>
     <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
         {{ csrf_field() }}
 
@@ -38,6 +38,7 @@
 
         document.getElementById('goToMap').addEventListener('click', function() {
           geocodeAddress(geocoder, map);
+          event.preventDefault();
         });
       }
 
