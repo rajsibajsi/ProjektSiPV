@@ -29,5 +29,6 @@ Route::get('profile', 'ProfileController@index')->name("profile");
 
 Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("goToLocation");
 //AIzaSyC3eL-GsH6hRmRWt9cwYJrONLkGcJCdrxQ
+Route::get('profile/locationShower', 'ProfileController@seeLocation')->name("seeLocation");
 
 Route::post('profile/addLocation', 'ProfileController@saveLocation')->name("addLocation");

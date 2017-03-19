@@ -33,12 +33,15 @@
         <input type="hidden" name="lat" id="lat">
         <input type="hidden" name="lang" id="lang">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+        <input type="hidden" name="oldLat" id="oldLat" value="{{ $lat }}">
+        <input type="hidden" name="oldLang" id="oldLang" value="{{ $lang }}">
     </form>
     <script>
     function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 10,
-            center: {lat: 46.559437, lng: 15.639228}
+            center: {lat: $("#oldLat").val(), lng: $("#oldLang").val()}
         });
         var geocoder = new google.maps.Geocoder();
 

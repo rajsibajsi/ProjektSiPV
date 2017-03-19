@@ -26,4 +26,11 @@ class ProfileController extends Controller
 
 		return view("profile");
     }
+
+    public function seeLocation() {
+    	$User = User::where('email', Auth::user()->email)->get()->first();
+    	$lat = $User->lat;
+    	$lang = $User->lang;
+    	return view("locationShower", compact('lat', 'lang'));
+    }
 }
