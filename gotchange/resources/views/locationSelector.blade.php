@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div style="min-height: 400px; margin-bottom: 20px;" id="map"></div>
-    <form class="form-horizontal" role="form" method="POST" action="{{ route('register') }}">
+    <form class="form-horizontal" role="form" method="POST" action="{{ route('addLocation') }}">
         {{ csrf_field() }}
 
         <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
@@ -32,20 +32,21 @@
         </div>
     </form>
     <script>
-      function initMap() {
+    var positionObject;
+    function initMap() {
         var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 10,
-          center: {lat: 46.559437, lng: 15.639228}
+            zoom: 10,
+            center: {lat: 46.559437, lng: 15.639228}
         });
         var geocoder = new google.maps.Geocoder();
 
         document.getElementById('goToMap').addEventListener('click', function() {
-          geocodeAddress(geocoder, map);
-          event.preventDefault();
+            geocodeAddress(geocoder, map);
+            event.preventDefault();
         });
-      }
+    }
 
-      function geocodeAddress(geocoder, resultsMap) {
+    function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
         geocoder.geocode({'address': address}, function(results, status) {
             if (status === 'OK') {
@@ -54,12 +55,24 @@
                     map: resultsMap,
                     position: results[0].geometry.location
                 });
-                console.log(results[0].geometry.location.lat() + ", " + results[0].geometry.location.lng());
+                positionObject = {
+                    lat: results[0].geometry.location.lat(),
+                    lng: results[0].geometry.location.lng(),
+                    _token: <?php Session::token() ?>
+                };
+                $.ajax({
+                    url: 'profile/locationSelector',
+                    type: "post",
+                    data: positionObject,
+                    success: function(data){
+                        alert(data);
+                    }
+                }); 
             } else {
                 alert('Geocode was not successful for the following reason: ' + status);
             }
         });
-      }
+    }
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC3eL-GsH6hRmRWt9cwYJrONLkGcJCdrxQ&callback=initMap">
