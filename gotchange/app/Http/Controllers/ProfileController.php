@@ -19,10 +19,9 @@ class ProfileController extends Controller
 
     public function saveLocation(Request $request) {
 	    $User = User::where('email', Auth::user()->email)->get()->first();
-	    echo $User->email;
-		/*$User->lat = $request->input('lat');
+		$User->lat = $request->input('lat');
 		$User->lng = $request->input('lng');
 
-		$User->save();*/
+		$User->save();
     }
 }
