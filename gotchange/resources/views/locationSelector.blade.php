@@ -25,7 +25,7 @@
                 <button id="goToMap" class="btn btn-primary">
                     Go to
                 </button>
-                <button id="save" class="btn btn-secondary">
+                <button type="submit" id="save" class="btn btn-secondary">
                     Save
                 </button>
             </div>
@@ -48,6 +48,7 @@
             event.preventDefault();
         });
     }
+
 
     function geocodeAddress(geocoder, resultsMap) {
         var address = document.getElementById('address').value;
