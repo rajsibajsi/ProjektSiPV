@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class ProfileController extends Controller
 {
@@ -15,7 +16,7 @@ class ProfileController extends Controller
     }
 
     public function saveLocation(Request $request) {
-	    $User = App\User::where('email', Auth::user()->email);
+	    $User = User::where('email', Auth::user()->email);
 		$User->lat = $request->input('lat');
 		$User->lng = $request->input('lng');
 
