@@ -57,10 +57,12 @@
                 });
                 positionObject = {
                     lat: results[0].geometry.location.lat(),
-                    lng: results[0].geometry.location.lng(),
-                    _token: <?php Session::token() ?>
+                    lng: results[0].geometry.location.lng()
                 };
                 $.ajax({
+                    headers: {
+                        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                    },
                     url: 'profile/locationSelector',
                     type: "post",
                     data: positionObject,
