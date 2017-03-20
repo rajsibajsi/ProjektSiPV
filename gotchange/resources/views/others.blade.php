@@ -10,13 +10,6 @@
                     <h4>{{ $email }}</h4>
                     <h5>Since {{ $date }}</h5>
                 </div>
-                <div class="row">
-                    @if ($lat)
-                        <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
-                    @else
-                        <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
-                    @endif
-                </div>
             </div>
         </div>
     </div>

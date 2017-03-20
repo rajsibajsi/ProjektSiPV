@@ -15,7 +15,7 @@ class ProfileController extends Controller
 
     public function others($id) {
         $User = User::where('id', $id)->get()->first();
-        return view("others", ['name' => $User->name, 'email' => $User->email, 'date' => $User->date, 'lat' => $User->lat]);
+        return view("others", ['name' => $User->name, 'email' => $User->email, 'date' => $User->created_at, 'lat' => $User->lat]);
     }
 
     public function goToLocation() {
