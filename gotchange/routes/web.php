@@ -15,6 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/ProjektSiPV/gotchange/public/login', function () {
+	return view('auth/login');
+});
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
@@ -28,4 +32,6 @@ Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCall
 Route::get('profile', 'ProfileController@index')->name("profile");
 
 Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("addLocation");
+
+
 
