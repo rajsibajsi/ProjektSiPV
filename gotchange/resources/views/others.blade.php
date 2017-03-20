@@ -8,7 +8,7 @@
                 <div class="row">
                     <h3>{{ $name }}</h3>
                     <h4>{{ $email }}</h4>
-                    <h5>Since {{ $date->format('d. m. Y') }}</h5>
+                    <h5>Since {{ $date }}</h5>
                 </div>
                 <div class="row">
                     @if ($lat)
