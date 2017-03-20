@@ -13,6 +13,11 @@ class ProfileController extends Controller
     	return view("profile");
     }
 
+    public function others($id) {
+        $User = User::where('id', $id)->get()->first();
+        return view("others", ['name' => $User->name, 'email' => $User->email, 'date' => $User->date, 'lat' => $User->lat]);
+    }
+
     public function goToLocation() {
     	return view("locationSelector");
     }
