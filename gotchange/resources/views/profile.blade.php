@@ -12,9 +12,9 @@
                 </div>
                 <div class="row">
                     @if (Auth::user()->lat)
-                        <a roll="button" class="btn btn-link" href="#">See Location</a>
+                        <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
                     @else
-                        <a roll="button" class="btn btn-link" href="{{ route('addLocation') }}">Add Location</a>
+                        <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
                     @endif
                 </div>
             </div>
@@ -25,6 +25,15 @@
             <h2>Album</h2>
         </div>
         <div class="col-sm-12">
+
+            <table class="col-sm-12">
+                <tr style="border-bottom:1pt solid black;"><th>Description</th><th>Country</th><th>Year</th></tr>
+                @foreach($coins as $coin)
+
+                    <tr><td>{{ $coin->description }}</td><td>{{ $coin->country }}</td><td>{{ $coin->year }}</td></tr>
+
+                @endforeach
+            </table>
         </div>
     </div>
 </div>

@@ -27,5 +27,15 @@ Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCall
 /* Profile */
 Route::get('profile', 'ProfileController@index')->name("profile");
 
-Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("addLocation");
+Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("goToLocation");
+//AIzaSyC3eL-GsH6hRmRWt9cwYJrONLkGcJCdrxQ
+Route::get('profile/locationShower', 'ProfileController@seeLocation')->name("seeLocation");
 
+Route::post('profile/addLocation', 'ProfileController@saveLocation')->name("addLocation");
+
+//Route::get('profile', 'ProfileController@dbAllCoins')->name("allCoins");
+
+/* Login */
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
