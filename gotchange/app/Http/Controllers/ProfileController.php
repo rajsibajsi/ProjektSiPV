@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
+use DB;
+use App\User;
+use App\Coins;
 
 class ProfileController extends Controller
 {
@@ -14,16 +18,28 @@ class ProfileController extends Controller
     	return view("locationSelector");
     }
 
-    public function dbAllCoins(){
-    	$coins = DB::select('select * from coins');
+    public function saveLocation(Request $request) {
+	    $User = User::where('email', Auth::user()->email)->get()->first();
+		$User->lat = $request->input('lat');
+		$User->lang = $request->input('lang');
 
-    	@foreach($coins as $coin)
-    		<div class="col-sm-12">
-    			<div>{{ $coin->name }}</div>
-    			<div>{{ $coin->weight }}</div>
-    		</div>
-    	@empty
-    		<h2>No coins in database</h2>
-    	@endforelse
+		$User->save();
+
+		return view("profile");
+    }
+
+    public function seeLocation() {
+    	$User = User::where('email', Auth::user()->email)->get()->first();
+    	$lat = $User->lat;
+    	$lang = $User->lang;
+    	return view("locationShower", compact('lat', 'lang'));
+    }
+
+    public function dbAllCoins() {
+
+        $coins = DB::select('select * from coins');
+      //  $coins->save();
+
+        return view("allCoins");
     }
 }
