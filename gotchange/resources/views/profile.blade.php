@@ -12,9 +12,9 @@
                 </div>
                 <div class="row">
                     @if (Auth::user()->lat)
-                        <a roll="button" class="btn btn-link" href="#">See Location</a>
+                        <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
                     @else
-                        <a roll="button" class="btn btn-link" href="{{ route('addLocation') }}">Add Location</a>
+                        <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
                     @endif
                 </div>
             </div>
@@ -25,7 +25,6 @@
             <h2>Album</h2>
         </div>
         <div class="col-sm-12">
-            {{ ProfileController.php::dbAllCoins(); }}
         </div>
     </div>
 </div>
