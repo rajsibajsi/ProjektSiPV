@@ -40,6 +40,6 @@ class ProfileController extends Controller
         $coins = DB::select('select * from coins');
       //  $coins->save();
 
-        return view("allCoins");
+        return view("allCoins", ['coins' => $coins]);
     }
 }

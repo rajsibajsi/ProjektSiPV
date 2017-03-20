@@ -25,6 +25,7 @@
             <h2>Album</h2>
         </div>
         <div class="col-sm-12">
+            {{ route('allCoins') }}
         </div>
     </div>
 </div>

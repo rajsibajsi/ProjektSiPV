@@ -34,3 +34,6 @@ Route::get('profile/locationShower', 'ProfileController@seeLocation')->name("see
 Route::post('profile/addLocation', 'ProfileController@saveLocation')->name("addLocation");
 
 Route::get('profile', 'ProfileController@dbAllCoins')->name("allCoins");
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');
