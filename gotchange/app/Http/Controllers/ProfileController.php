@@ -51,6 +51,8 @@ class ProfileController extends Controller
 */
         $coins = DB::select('select * from coins');
 
+        session(['albumEditing', 'false']);
+
         return view('profile', ['coins'=> $coins]);
     }
 
@@ -73,13 +75,5 @@ class ProfileController extends Controller
     	$lat = $User->lat;
     	$lang = $User->lang;
     	return view("locationShower", compact('lat', 'lang'));
-    }
-
-    public function dbAllCoins() {
-
-        $coins = DB::select('select * from coins');
-      //  $coins->save();
-
-        return view("allCoins", ['coins' => $coins]);
     }
 }
