@@ -18,6 +18,9 @@
                     <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
                     @endif
                 </div>
+                @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
+                    <div class="row"><button type="button" class="btn btn-primary" style="margin-top: 5px;">Edit Album</button></div>
+                @endif
             </div>
         </div>
     </div>
