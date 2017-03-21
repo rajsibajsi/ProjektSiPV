@@ -15,8 +15,10 @@ class CreateCoinsTable extends Migration
     {
         Schema::create('coins', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->string('name')->nullable();
-            $table->float('weight')->nullable();
+            $table->string('description')->nullable();
+            $table->string('country')->nullable();
+            $table->integer('year')->nullable();
+            $table->string('img')->nullable();
         });
     }
 

@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container">
     <div class="col-sm-3">
         <div class="row">
@@ -12,9 +13,9 @@
                 </div>
                 <div class="row">
                     @if (Auth::user()->lat)
-                        <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
+                    <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
                     @else
-                        <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
+                    <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
                     @endif
                 </div>
             </div>
@@ -25,7 +26,28 @@
             <h2>Album</h2>
         </div>
         <div class="col-sm-12">
-            {{ route('allCoins') }}
+            <?php $var = 0 ?>
+            @foreach($coins as $coin)
+                @if ($var === 0)
+                    <div style="display: flex;">
+                @endif
+                <div class="col-sm-6 col-md-3" style="margin-right: -15px; margin-left: -15px; margin-bottom: -22px;">
+                    <div class="thumbnail">
+                        <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 0.2">
+
+                        <div class="thumbnailheader" style="text-align: center; display: block; text-overflow: ellipsis; word-wrap: break-word; overflow: hidden; height: 3.6em; line-height: 1.8em;">{{ $coin->description }}</div>
+                        <div class="caption">
+                            <p style="text-align: center;">Country: {{ $coin->country }}</p>
+                            <p style="text-align: center;">Year: {{ $coin->year }}</p>
+                        </div>
+                    </div>
+                </div>
+                <?php $var += 1 ?>
+                @if ($var === 4)
+                    </div>
+                    <?php $var = 0 ?>
+                @endif
+            @endforeach
         </div>
     </div>
 </div>
