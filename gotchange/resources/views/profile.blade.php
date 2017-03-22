@@ -11,10 +11,33 @@ function albumEditButton()
         url:'changeAlbumVar',
         data:'_token = <?php echo csrf_token() ?>',
         success:function(response){
-            alert(response);
+            $('.AlbumEditStatus').html(response);
         }
     });
 }
+
+$(function(){ //Ready handler
+    $('.coinClick').click(function(){
+        alert('ola');
+        $.ajax({
+            type: 'POST',
+            url:'getAlbumVar',
+            data:'_token = <?php echo csrf_token() ?>',
+            success:function(response){
+                if(response == 'true')
+                {
+                    $.ajax({
+                        type: 'GET',
+                        url:'dbCoinOwner',
+                        data:'_token = <?php echo csrf_token() ?>',
+                    });
+                }
+            }
+        });
+
+
+    });
+});
 </script>
 
 <div class="container">
@@ -35,6 +58,9 @@ function albumEditButton()
                 </div>
                 @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
                     <div class="row"><button type="button" class="btn btn-primary" style="margin-top: 5px;" onclick="albumEditButton()">Edit Album</button></div>
+                    <div class="row">
+                        <h6 class="AlbumEditStatus">Urejanje albuma je <kbd>izklopljeno</kbd></h6>
+                    </div>
                 @endif
             </div>
         </div>
@@ -50,7 +76,7 @@ function albumEditButton()
                     <div style="display: flex;">
                 @endif
                 <div class="col-sm-6 col-md-3" style="margin-right: -15px; margin-left: -15px; margin-bottom: -22px;">
-                    <div class="thumbnail">
+                    <div class="thumbnail coinClick">
                         <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 0.2">
 
                         <div class="thumbnailheader" style="text-align: center; display: block; text-overflow: ellipsis; word-wrap: break-word; overflow: hidden; height: 3.6em; line-height: 1.8em;">{{ $coin->description }}</div>

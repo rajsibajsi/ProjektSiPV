@@ -33,4 +33,9 @@ Route::get('profile/locationShower', 'ProfileController@seeLocation')->name("see
 
 Route::post('profile/addLocation', 'ProfileController@saveLocation')->name("addLocation");
 
+/* Ajax calls */
 Route::post('changeAlbumVar', 'AjaxController@index');
+
+Route::post('getAlbumVar', 'AjaxController@getAlbumSessionVariable');
+
+Route::get('dbCoinOwner', 'AjaxController@settingOwnership')

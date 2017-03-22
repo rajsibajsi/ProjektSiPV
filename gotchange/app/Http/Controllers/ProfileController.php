@@ -7,6 +7,7 @@ use Auth;
 use DB;
 use App\User;
 use App\Coins;
+use Session;
 
 class ProfileController extends Controller
 {
@@ -51,7 +52,7 @@ class ProfileController extends Controller
 */
         $coins = DB::select('select * from coins');
 
-        session(['albumEditing', 'false']);
+        Session::put(['albumEditing', 'false']);
 
         return view('profile', ['coins'=> $coins]);
     }
