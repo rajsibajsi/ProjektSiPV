@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use Session;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use DB;
+use Auth;
+use App\User;
+use App\Coins;
 
 class AjaxController extends Controller
 {
@@ -33,5 +37,13 @@ class AjaxController extends Controller
 	public function getAlbumSessionVariable()
 	{
 		return response(Session::get('albumEditing'));
+	}
+
+	public function settingOwnership()
+	{
+		$User = User::where('id', Auth::user()->id)->get()->first();
+		$coinID = Coins::where('description', $_GET['data'])->get()->first();
+		DB::table('users_coins')->insert(['id_user'=> $User->id, 
+			'id_coin'=> $coinID->id]);
 	}
 }

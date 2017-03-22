@@ -18,7 +18,9 @@ function albumEditButton()
 
 $(function(){ //Ready handler
     $('.coinClick').click(function(){
-        alert('ola');
+        //alert('ola');
+        $coinDescription = $(this).children('div.thumbnailheader').text();
+        //alert($coinDescription);
         $.ajax({
             type: 'POST',
             url:'getAlbumVar',
@@ -29,7 +31,7 @@ $(function(){ //Ready handler
                     $.ajax({
                         type: 'GET',
                         url:'dbCoinOwner',
-                        data:'_token = <?php echo csrf_token() ?>',
+                        data: {'data':$coinDescription},
                     });
                 }
             }
@@ -59,7 +61,8 @@ $(function(){ //Ready handler
                 @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
                     <div class="row"><button type="button" class="btn btn-primary" style="margin-top: 5px;" onclick="albumEditButton()">Edit Album</button></div>
                     <div class="row">
-                        <h6 class="AlbumEditStatus">Urejanje albuma je <kbd>izklopljeno</kbd></h6>
+                        <h6 class="AlbumEditStatus">Album editing is <kbd>disabled</kbd></h6>
+                        <input type="hidden" name="">
                     </div>
                 @endif
             </div>
