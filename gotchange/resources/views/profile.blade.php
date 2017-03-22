@@ -2,6 +2,21 @@
 
 @section('content')
 
+<script>
+function albumEditButton()
+{
+    //alert('Evo nas');
+    $.ajax({
+        type: 'POST',
+        url:'changeAlbumVar',
+        data:'_token = <?php echo csrf_token() ?>',
+        success:function(response){
+            alert(response);
+        }
+    });
+}
+</script>
+
 <div class="container">
     <div class="col-sm-3">
         <div class="row">
@@ -19,7 +34,7 @@
                     @endif
                 </div>
                 @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
-                    <div class="row"><button type="button" class="btn btn-primary" style="margin-top: 5px;">Edit Album</button></div>
+                    <div class="row"><button type="button" class="btn btn-primary" style="margin-top: 5px;" onclick="albumEditButton()">Edit Album</button></div>
                 @endif
             </div>
         </div>
