@@ -8,7 +8,11 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    You are logged in!
+                    @if( ! empty($Users) )
+                        @foreach ($Users as $user)
+                            <p>This is user {{ $user->name }}</p>
+                        @endforeach
+                    @endif
                 </div>
             </div>
         </div>
