@@ -21,7 +21,7 @@ class RedirectIfAuthenticated
     {
         if (Auth::guard($guard)->check()) {
             $users = User::where('id', '!=', Auth::user()->id)->get();
-            return view('home', ['users' => $users]);
+            return redirect('/home', ['users' => $users]);
         }
 
         return $next($request);
