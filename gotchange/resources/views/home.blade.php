@@ -8,8 +8,8 @@
                 <div class="panel-heading">Dashboard</div>
 
                 <div class="panel-body">
-                    @if( ! empty($Users) )
-                        @foreach ($Users as $user)
+                    @if( ! empty($users) )
+                        @foreach ($users as $user)
                             <p>This is user {{ $user->name }}</p>
                         @endforeach
                     @endif
