@@ -79,6 +79,11 @@ class RegisterController extends Controller
      */
     public function redirectToProvider()
     {
+        try {
+            $user = Socialite::driver('facebook')->redirect();
+        } catch (Exception $e) {
+            return redirect('auth/facebook');
+        }
         return Socialite::driver('facebook')->redirect();
     }
 
@@ -89,7 +94,7 @@ class RegisterController extends Controller
      */
     public function handleProviderCallback()
     {
-        /*try {
+        try {
             $user = Socialite::driver('facebook')->user();
         } catch (Exception $e) {
             return redirect('auth/facebook');
@@ -100,8 +105,7 @@ class RegisterController extends Controller
         Auth::login($authUser, true);
 
         $users = User::where('id', '!=', Auth::user()->id)->get();
-        return view('home', ['users' => $users]);*/
-        dd(Socialite::driver('facebook')->user());
+        return view('home', ['users' => $users]);
     }
  
     /**
