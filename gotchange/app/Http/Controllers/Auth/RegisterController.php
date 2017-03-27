@@ -98,8 +98,9 @@ class RegisterController extends Controller
         $authUser = $this->findOrCreateUser($user);
  
         Auth::login($authUser, true);
- 
-        return view('home');
+
+        $users = User::where('id', '!=', Auth::user()->id)->get();
+        return view('home', ['users' => $users]);
     }
  
     /**
