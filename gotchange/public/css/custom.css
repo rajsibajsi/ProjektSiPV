@@ -11,6 +11,7 @@
 
 .panel-body {
 	text-align: center;
+	text-decoration: none;
 }
 
 .form-horizontal {
@@ -27,6 +28,10 @@
 }
 
 .profileHeader {
-	text-decoration: none;
 	border-bottom: 1px solid #756e7c;
+	padding-bottom: 20px;
+}
+
+.profileHeader:hover {
+	text-decoration: none;
 }
