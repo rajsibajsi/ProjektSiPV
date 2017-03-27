@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     @if( ! empty($users) )
                         @foreach ($users as $user)
-                            <a class="profileHeader" href="{{ url('profile/' . $user->id) }}"><h3>{{ $user->name }}</h3></a>
+                            <a style="text-decoration: none;" href="{{ url('profile/' . $user->id) }}"><h3 style="padding-bottom: 20px; border-bottom: 1px solid #756e7c;">{{ $user->name }}</h3></a>
                         @endforeach
                     @endif
                 </div>

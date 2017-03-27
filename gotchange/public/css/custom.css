@@ -26,12 +26,3 @@
 #profileTitle h2 {
 	float: right;
 }
-
-.profileHeader h3 {
-	border-bottom: 1px solid #756e7c;
-	padding-bottom: 20px;
-}
-
-.profileHeader:hover {
-	text-decoration: none;
-}
