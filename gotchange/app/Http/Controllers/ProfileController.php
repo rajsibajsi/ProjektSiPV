@@ -29,7 +29,7 @@ class ProfileController extends Controller
 
 		$User->save();
 
-		return view("profile");
+		return redirect('/profile');
     }
 
     public function seeLocation() {
