@@ -2,3 +2,9 @@
 {
 	background: #f2f2f2;
 }
+
+.chatSelection:hover
+{
+	font-weight: bold;
+	cursor: pointer;
+}
