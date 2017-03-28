@@ -35,7 +35,7 @@ class HomeController extends Controller
 
         $sorted = $users->sortBy('distanceToMe');
 
-        return view('home', ['users' => $users]);
+        return view('home', ['users' => $sorted]);
     }
 }
 
