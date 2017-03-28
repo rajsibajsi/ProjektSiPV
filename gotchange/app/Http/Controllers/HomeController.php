@@ -34,7 +34,7 @@ class HomeController extends Controller
         }
 
         function sort_objects($a, $b) {
-            if($->distanceToMe == $b->distanceToMe){ return 0 ; }
+            if($a->distanceToMe == $b->distanceToMe){ return 0 ; }
             return ($a->distanceToMe < $b->distanceToMe) ? -1 : 1;
         }
 
