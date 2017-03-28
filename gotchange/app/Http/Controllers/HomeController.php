@@ -33,6 +33,13 @@ class HomeController extends Controller
             $users[$i]->distanceToMe = $distance * 111.13384;
         }
 
+        function sort_objects($a, $b) {
+            if($->distanceToMe == $b->distanceToMe){ return 0 ; }
+            return ($a->distanceToMe < $b->distanceToMe) ? -1 : 1;
+        }
+
+        usort($users, 'sort_objects');
+
         return view('home', ['users' => $users]);
     }
 }
