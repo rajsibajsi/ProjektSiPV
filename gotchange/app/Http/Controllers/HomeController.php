@@ -37,7 +37,7 @@ class HomeController extends Controller
         return view('home', ['users' => $users]);
     }
 
-    function getDistanceBetweenPointsNew($latitude1, $longitude1, $latitude2, $longitude2, $unit = 'Km') {
+    public function getDistanceBetweenPointsNew($latitude1, $longitude1, $latitude2, $longitude2, $unit = 'Km') {
         $theta = $longitude1 - $longitude2;
         $distance = (sin(deg2rad($latitude1)) * sin(deg2rad($latitude2))) + (cos(deg2rad($latitude1)) * cos(deg2rad($latitude2)) * cos(deg2rad($theta)));
         $distance = acos($distance);
