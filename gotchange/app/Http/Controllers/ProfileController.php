@@ -51,10 +51,13 @@ class ProfileController extends Controller
         }
 */
         $coins = DB::select('select * from coins');
+        $User = User::where('email', Auth::user()->email)->get()->first();
+        $users_coins = DB::select('select id_coin from users_coins where id_user = ?', 
+        	[$User->id]);
 
         Session::put(['albumEditing', 'false']);
 
-        return view('profile', ['coins'=> $coins]);
+        return view('profile', ['coins'=> $coins, 'users_coins' => $users_coins]);
     }
 
     public function goToLocation() {
