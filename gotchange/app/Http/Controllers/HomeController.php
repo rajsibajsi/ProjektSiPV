@@ -29,14 +29,12 @@ class HomeController extends Controller
         $users = User::where('id', '!=', Auth::user()->id)->get();
 
         for ($i=0; $i < count($users) - 1; $i++) { 
-            $theta = Auth::user()->lang - $users[$i]->lang;
-            $distance = (sin(deg2rad(Auth::user()->lat)) * sin(deg2rad($users[$i]->lat))) + (cos(deg2rad(Auth::user()->lat)) * cos(deg2rad($users[$i]->lat)) * cos(deg2rad($theta)));
-            $distance = acos($distance);
-            $distance = rad2deg($distance);
-            $distance = $distance * 60 * 1.1515;
-            $users[$i]->distanceToMe = $distance * 1.609344;
+            $distance = rad2deg(acos((sin(deg2rad(Auth::user()->lat))*sin(deg2rad($users[$i]->lat))) + (cos(deg2rad(Auth::user()->lat))*cos(deg2rad($users[$i]->lat))*cos(deg2rad(Auth::user()->lang-$users[$i]->long)))));
+            $users[$i]->distanceToMe = $distance * 111.13384;
         }
 
         return view('home', ['users' => $users]);
     }
 }
+
+//$degrees = rad2deg(acos((sin(deg2rad($point1_lat))*sin(deg2rad($point2_lat))) + (cos(deg2rad($point1_lat))*cos(deg2rad($point2_lat))*cos(deg2rad($point1_long-$point2_long)))));
