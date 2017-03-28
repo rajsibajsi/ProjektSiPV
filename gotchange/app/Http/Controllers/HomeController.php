@@ -37,8 +37,6 @@ class HomeController extends Controller
             $users[$i]->distanceToMe = $distance * 1.609344;
         }
 
-        asort($users);
-
         return view('home', ['users' => $users]);
     }
 }
