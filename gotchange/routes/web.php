@@ -39,3 +39,6 @@ Route::post('changeAlbumVar', 'AjaxController@index');
 Route::post('getAlbumVar', 'AjaxController@getAlbumSessionVariable');
 
 Route::get('dbCoinOwner', 'AjaxController@settingOwnership');
+
+/* Chat */
+Route::get('/chat', 'ChatController@index')->name("chat");
