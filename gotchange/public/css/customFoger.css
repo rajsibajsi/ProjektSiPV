@@ -8,3 +8,19 @@
 	font-weight: bold;
 	cursor: pointer;
 }
+
+.center
+{
+	width: 150px;
+	margin: 40px auto;  
+}
+
+.btn-danger
+{
+	background-color: #bc3a3a;
+}
+
+.input-number
+{
+	text-align: center;
+}
