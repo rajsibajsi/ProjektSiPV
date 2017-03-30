@@ -17,6 +17,7 @@ class CreateUsersCoinsTable extends Migration
             $table->increments('id')->unique();
             $table->integer('id_user')->nullable(); /*Foreign key for user*/
             $table->integer('id_coin')->nullable(); /*Foreign key for coin name and propreties*/
+            $table->integer('number_of_coins')->nullable();
         });
     }
 

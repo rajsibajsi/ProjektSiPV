@@ -55,7 +55,7 @@ class AjaxController extends Controller
 		else //Insert if there is no such data in DB
 		{
 			DB::table('users_coins')
-			->insert(['id_user'=> $User->id, 'id_coin'=> $coinID->id]);
+			->insert(['id_user' => $User->id, 'id_coin' => $coinID->id, 'number_of_coins' => intval($_GET['numberOfCoins'])]);
 		}
 	}
 }

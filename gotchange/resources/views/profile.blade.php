@@ -5,7 +5,6 @@
 <script>
 function albumEditButton()
 {
-    //alert('Evo nas');
     $.ajax({
         type: 'POST',
         url:'changeAlbumVar',
@@ -19,6 +18,7 @@ function albumEditButton()
 $(function(){ //Ready handler
     $('.coinClick').click(function(){
         var $coinDescription = $(this).children('div.thumbnailheader').text();
+        var $numberOfCoins = $(this).find('#inputNumber').val();
         var imgCss = $(this).children('img');
         $.ajax({
             type: 'POST',
@@ -39,7 +39,7 @@ $(function(){ //Ready handler
                     $.ajax({
                         type: 'GET',
                         url:'dbCoinOwner',
-                        data: {'data':$coinDescription},
+                        data: {'data':$coinDescription, 'numberOfCoins':$numberOfCoins},
                     });
                 }
             }
@@ -63,7 +63,7 @@ $(function(){ //Ready handler
                     $(this).attr('disabled', true);
                 }
                 else {
-                    $(this).attr('disabled', false); //to je treba zrihtat da enablaš pol
+                    $('#spanPlus').children().attr('disabled', false);
                 }
 
             } else if(type == 'plus') {
@@ -74,8 +74,8 @@ $(function(){ //Ready handler
                 if(parseInt(input.val()) == input.attr('max')) {
                     $(this).attr('disabled', true);
                 }
-                else {//to je treba zrihtat da enablaš pol
-                    $(this).parent().find('button[class=""]').attr('disabled', false);
+                else {
+                    $('#spanMinus').children().attr('disabled', false);
                 }
 
             }
@@ -128,7 +128,7 @@ $(function(){ //Ready handler
                             @if($users_coin->id_coin === $coin->id)
                                 <?php $userHasCoin = 'true' ?>
                                 @if($userHasCoin === 'true')
-                                    <?php $ownedCoins = 1 ?>
+                                    <?php $ownedCoins = $users_coin->number_of_coins ?>
                                 @endif
                             @endif
                         @endforeach
@@ -146,21 +146,25 @@ $(function(){ //Ready handler
                         </div>
                         <p style="text-align: center;">Coins owned:</p>
                         <div class="input-group">
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[{{ $coin->id }}]">
-                                    <span class="glyphicon glyphicon-minus"></span>
-                                </button>
-                            </span>
-                            @if($userHasCoin === 'true')
-                                <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="<?php echo($ownedCoins)?>" min="0" max="100">
-                            @else
-                                <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="0" min="0" max="100">
+                            @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
+                                <span class="input-group-btn" id="spanMinus">
+                                    <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[{{ $coin->id }}]">
+                                        <span class="glyphicon glyphicon-minus"></span>
+                                    </button>
+                                </span>
                             @endif
-                            <span class="input-group-btn">
-                                <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[{{ $coin->id }}]">
-                                    <span class="glyphicon glyphicon-plus"></span>
-                                </button>
-                            </span>
+                            @if($userHasCoin === 'true')
+                                <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="<?php echo($ownedCoins)?>" min="1" max="100" id="inputNumber">
+                            @else
+                                <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="1" min="1" max="100" id="inputNumber">
+                            @endif
+                            @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
+                                <span class="input-group-btn" id="spanPlus">
+                                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[{{ $coin->id }}]">
+                                        <span class="glyphicon glyphicon-plus"></span>
+                                    </button>
+                                </span>
+                            @endif
                         </div>
                     </div>
                 </div>
