@@ -18,7 +18,7 @@ function albumEditButton()
 $(function(){ //Ready handler
     $('.coinClick').click(function(){
         var $coinDescription = $(this).children('div.thumbnailheader').text();
-        var $numberOfCoins = $(this).find('#inputNumber').val();
+        var $numberOfCoins = $(this).find('#inputNumber').val(); //To zaj ne dela!!!! Need FIX!
         var imgCss = $(this).children('img');
         $.ajax({
             type: 'POST',
@@ -122,49 +122,53 @@ $(function(){ //Ready handler
                     <div style="display: flex;">
                 @endif
                 <div class="col-sm-6 col-md-3" style="margin-right: -15px; margin-left: -15px; margin-bottom: -22px;">
-                    <div class="thumbnail coinClick">
-                        <?php $userHasCoin = 'false' ?>
-                        @foreach($users_coins as $users_coin)
-                            @if($users_coin->id_coin === $coin->id)
-                                <?php $userHasCoin = 'true' ?>
-                                @if($userHasCoin === 'true')
-                                    <?php $ownedCoins = $users_coin->number_of_coins ?>
+                    <div class="thumbnail">
+                        <div class="coinClick">
+                            <?php $userHasCoin = 'false' ?>
+                            @foreach($users_coins as $users_coin)
+                                @if($users_coin->id_coin === $coin->id)
+                                    <?php $userHasCoin = 'true' ?>
+                                    @if($userHasCoin === 'true')
+                                        <?php $ownedCoins = $users_coin->number_of_coins ?>
+                                    @endif
                                 @endif
-                            @endif
-                        @endforeach
+                            @endforeach
 
-                        @if($userHasCoin === 'true')
-                            <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 1">
-                        @else
-                            <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 0.2">
-                        @endif
-
-                        <div class="thumbnailheader" style="text-align: center; display: block; text-overflow: ellipsis; word-wrap: break-word; overflow: hidden; height: 3.6em; line-height: 1.8em;">{{ $coin->description }}</div>
-                        <div class="caption">
-                            <p style="text-align: center;">Country: {{ $coin->country }}</p>
-                            <p style="text-align: center;">Year: {{ $coin->year }}</p>
-                        </div>
-                        <p style="text-align: center;">Coins owned:</p>
-                        <div class="input-group">
-                            @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
-                                <span class="input-group-btn" id="spanMinus">
-                                    <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[{{ $coin->id }}]">
-                                        <span class="glyphicon glyphicon-minus"></span>
-                                    </button>
-                                </span>
-                            @endif
                             @if($userHasCoin === 'true')
-                                <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="<?php echo($ownedCoins)?>" min="1" max="100" id="inputNumber">
+                                <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 1">
                             @else
-                                <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="1" min="1" max="100" id="inputNumber">
+                                <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 0.2">
                             @endif
-                            @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
-                                <span class="input-group-btn" id="spanPlus">
-                                    <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[{{ $coin->id }}]">
-                                        <span class="glyphicon glyphicon-plus"></span>
-                                    </button>
-                                </span>
-                            @endif
+
+                            <div class="thumbnailheader" style="text-align: center; display: block; text-overflow: ellipsis; word-wrap: break-word; overflow: hidden; height: 3.6em; line-height: 1.8em;">{{ $coin->description }}</div>
+                            <div class="caption">
+                                <p style="text-align: center;">Country: {{ $coin->country }}</p>
+                                <p style="text-align: center;">Year: {{ $coin->year }}</p>
+                            </div>
+                            <p style="text-align: center;">Coins owned:</p>
+                        </div>
+                        <div>
+                            <div class="input-group">
+                                @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
+                                    <span class="input-group-btn" id="spanMinus">
+                                        <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[{{ $coin->id }}]">
+                                            <span class="glyphicon glyphicon-minus"></span>
+                                        </button>
+                                    </span>
+                                @endif
+                                @if($userHasCoin === 'true')
+                                    <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="<?php echo($ownedCoins)?>" min="1" max="100" id="inputNumber">
+                                @else
+                                    <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="1" min="1" max="100" id="inputNumber">
+                                @endif
+                                @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
+                                    <span class="input-group-btn" id="spanPlus">
+                                        <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[{{ $coin->id }}]">
+                                            <span class="glyphicon glyphicon-plus"></span>
+                                        </button>
+                                    </span>
+                                @endif
+                            </div>
                         </div>
                     </div>
                 </div>
