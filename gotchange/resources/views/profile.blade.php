@@ -18,7 +18,7 @@ function albumEditButton()
 $(function(){ //Ready handler
     $('.coinClick').click(function(){
         var $coinDescription = $(this).children('div.thumbnailheader').text();
-        var $numberOfCoins = $(this).find('#inputNumber').val(); //To zaj ne dela!!!! Need FIX!
+        var $numberOfCoins = $(this).parent().find('#inputNumber').val();
         var imgCss = $(this).children('img');
         $.ajax({
             type: 'POST',
@@ -47,12 +47,11 @@ $(function(){ //Ready handler
     });
 
     $('.btn-number').click(function(e){
-        e.preventDefault();
-
         fieldName = $(this).attr('data-field');
         type      = $(this).attr('data-type');
         var input = $("input[name='"+fieldName+"']");
         var currentVal = parseInt(input.val());
+
         if (!isNaN(currentVal)) {
             if(type == 'minus') {
 
@@ -82,6 +81,25 @@ $(function(){ //Ready handler
         } else {
             input.val(0);
         }
+
+        var $coinDescription = $(this).parent().parent().parent().parent().find('div.thumbnailheader').text();
+        var $numberOfCoins = $(this).parent().parent().find('#inputNumber').val();
+
+        $.ajax({
+            type: 'POST',
+            url:'getAlbumVar',
+            data:'_token = <?php echo csrf_token() ?>',
+            success:function(response){
+                if(response == 'true')
+                {
+                    $.ajax({
+                        type: 'GET',
+                        url:'updateNumberOfCoins',
+                        data: {'data':$coinDescription, 'numberOfCoins':$numberOfCoins},
+                    });
+                }
+            }
+        });
     });
 });
 </script>

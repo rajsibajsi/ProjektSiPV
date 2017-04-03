@@ -58,4 +58,15 @@ class AjaxController extends Controller
 			->insert(['id_user' => $User->id, 'id_coin' => $coinID->id, 'number_of_coins' => intval($_GET['numberOfCoins'])]);
 		}
 	}
+
+	public function updateNumberOfCoins()
+	{
+		$User = User::where('id', Auth::user()->id)->get()->first();
+		$coinID = Coins::where('description', $_GET['data'])->get()->first();
+
+		DB::table('users_coins')
+		->where('id_user', $User->id)
+		->where('id_coin', $coinID->id)
+		->update(['number_of_coins' => $_GET['numberOfCoins']]);
+	}
 }
