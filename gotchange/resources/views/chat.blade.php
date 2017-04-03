@@ -2,6 +2,22 @@
 
 @section('content')
 
+<script>
+$(function(){
+    $('.chatSent').click(function(){
+        $('.chatDiv').empty();
+
+        $('.chatDiv').load('chat/sent');
+    });
+
+    $('.chatInbox').click(function(){
+        $('.chatDiv').empty();
+
+        $('.chatDiv').load('chat/inbox');
+    });
+});
+</script>
+
 <div class="container">
     <div class="col-sm-3">
         <div class="row">
@@ -10,8 +26,8 @@
             		<button type="button" class="btn btn-outline-warning">New Message</button>
             	</div>
                 <div class="row">
-                	<h5 class="chatSelection">Inbox</h5>
-                	<h5 class="chatSelection">Sent items</h5>
+                	<h5 class="chatSelection chatInbox">Inbox</h5>
+                	<h5 class="chatSelection chatSent">Sent items</h5>
                 </div>
             </div>
         </div>
@@ -20,35 +36,29 @@
     	<div class="row" style="border-bottom: black 1px solid;">
     		<h2>Messages</h2>
     	</div>
-    	<div class="row">
+    	<div class="row chatDiv">
     		<table class="table table-striped">
     			<thead class="thead-default">
     				<tr>
     					<th>#</th>
     					<th>Sender</th>
     					<th>Subject</th>
+                        <th>Message</th>
     					<th>Time</th>
     				</tr>
     			</thead>
     			<tbody>
-    				<tr>
-    					<th scope="row">1</th>
-    					<td>Mark</td>
-    					<td>Otto</td>
-    					<td>@mdo</td>
-    				</tr>
-    				<tr>
-    					<th scope="row">2</th>
-    					<td>Jacob</td>
-    					<td>Thornton</td>
-    					<td>@fat</td>
-    				</tr>
-    				<tr>
-    					<th scope="row">3</th>
-    					<td>Larry</td>
-    					<td>the Bird</td>
-    					<td>@twitter</td>
-    				</tr>
+                    @foreach($chatMessages as $chatMessage)
+                        <?php $chat_counter = 1 ?>
+                        <tr>
+                            <th scope="row"><?php echo ($chat_counter); ?></th>
+                            <td>{{ $chatMessage->sender_name }}</td>
+                            <td>{{ $chatMessage->subject }}</td>
+                            <td>{{ $chatMessage->message }}</td>
+                            <td>{{ $chatMessage->sent_at }}</td>
+                        </tr>
+                        <?php $chat_counter += 1 ?>
+                    @endforeach
     			</tbody>
     		</table>
     	</div>
