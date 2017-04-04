@@ -37,7 +37,7 @@ class HomeController extends Controller
             $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad(Auth::user()->lat)) * cos(deg2rad($users[$i]->lat)) * sin($dLang/2) * sin($dLang/2);
             $c = 2* atan2(sqrt($a), sqrt(1-$a));
 
-            $users->distanceToMe = $R * $c;
+            $users[$i]->distanceToMe = $R * $c;
         }
 
         $sorted = $users->sortBy('distanceToMe');
