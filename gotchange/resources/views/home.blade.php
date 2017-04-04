@@ -26,7 +26,7 @@ $(document).ready( function() {
             distances.push($(this).text());
         });
         for (var i = 0; i < distances.length; i++) {
-            if (distances[i] < 50) {
+            if (distances[i] > 50) {
                 $(".panel-body > a:nth-child(" + i + ")").css("display", "none");
             };
         };
