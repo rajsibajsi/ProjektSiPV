@@ -5,12 +5,12 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading">Users</div>
+                <div class="panel-heading"><div class="col-sm-10">Users</div><div id="nearMe" style="float:right;" class="col-sm-2">Near me</div></div>
 
                 <div class="panel-body">
                     @if( ! empty($users) )
                         @foreach ($users as $user)
-                            <a style="text-decoration: none;" href="{{ url('profile/' . $user->id) }}"><h4 style="color: black; padding-bottom: 20px; padding-top: 10px; border-bottom: 1px solid #f5f8fa;">{{ $user->name }}</h4><span>{{ $user->distanceToMe }}</span></a>
+                            <a style="text-decoration: none;" href="{{ url('profile/' . $user->id) }}"><h4 style="color: black; padding-bottom: 20px; padding-top: 10px; border-bottom: 1px solid #f5f8fa;">{{ $user->name }}</h4><span stlye="display: none;">{{ $user->distanceToMe }}</span></a>
                         @endforeach
                     @endif
                 </div>

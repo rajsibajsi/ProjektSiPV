@@ -21,6 +21,11 @@
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
+        $(document).ready( function() {
+            $("#nearMe").click( function() {
+                console.log($(".panel-body a span").val());
+            });
+        });
     </script>
 </head>
 <body>
