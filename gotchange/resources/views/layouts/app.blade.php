@@ -21,13 +21,6 @@
         window.Laravel = {!! json_encode([
             'csrfToken' => csrf_token(),
         ]) !!};
-        $(document).ready( function() {
-            $("#nearMe").click( function() {
-                $(".distance").each( function() {
-                    console.log($(this).val());
-                });
-            });
-        });
     </script>
 </head>
 <body>

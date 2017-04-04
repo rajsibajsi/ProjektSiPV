@@ -18,4 +18,13 @@
         </div>
     </div>
 </div>
+<script type="text/javascript">
+$(document).ready( function() {
+    $("#nearMe").click( function() {
+        $(".distance").each( function() {
+            console.log($(this).val());
+        });
+    });
+});
+</script>
 @endsection
