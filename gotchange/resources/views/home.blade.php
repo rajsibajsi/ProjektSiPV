@@ -27,7 +27,7 @@ $(document).ready( function() {
         });
         for (var i = 0; i < distances.length; i++) {
             if (distances[i] > 50) {
-                $(".panel-body > a:nth-child(" + (i + 1) + ")").slideUp("fast");
+                $(".panel-body > a:nth-child(" + (i + 1) + ")").slideUp("slow");
             };
         };
     });
