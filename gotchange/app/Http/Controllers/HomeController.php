@@ -29,8 +29,15 @@ class HomeController extends Controller
         $users = User::where('id', '!=', Auth::user()->id)->get();
 
         for ($i=0; $i < count($users) - 1; $i++) { 
-            $distance = rad2deg(acos((sin(deg2rad(Auth::user()->lat))*sin(deg2rad($users[$i]->lat))) + (cos(deg2rad(Auth::user()->lat))*cos(deg2rad($users[$i]->lat))*cos(deg2rad(Auth::user()->lang-$users[$i]->long)))));
-            $users[$i]->distanceToMe = $distance * 111.13384;
+            //$distance = rad2deg(acos((sin(deg2rad(Auth::user()->lat))*sin(deg2rad($users[$i]->lat))) + (cos(deg2rad(Auth::user()->lat))*cos(deg2rad($users[$i]->lat))*cos(deg2rad(Auth::user()->lang-$users[$i]->long)))));
+            //$users[$i]->distanceToMe = $distance * 111.13384;
+            $R = 6371;
+            $dLat = deg2rad(Auth::user()->lat - $users[$i]->lat);
+            $dLang = deg2rad(Auth::user()->lang - $users[$i]->lang);
+            $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad(Auth::user()->lat)) * cos(deg2rad($sers[$i]->lat)) * sin($dLang/2) * sin($dLang/2);
+            $c = 2* atan2(sqrt($a), sqrt(1-$a));
+
+            $users->distanceToMe = $R * $c;
         }
 
         $sorted = $users->sortBy('distanceToMe');
