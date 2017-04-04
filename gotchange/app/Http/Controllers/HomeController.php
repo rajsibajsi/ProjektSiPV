@@ -34,7 +34,7 @@ class HomeController extends Controller
             $R = 6371;
             $dLat = deg2rad(Auth::user()->lat - $users[$i]->lat);
             $dLang = deg2rad(Auth::user()->lang - $users[$i]->lang);
-            $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad(Auth::user()->lat)) * cos(deg2rad($sers[$i]->lat)) * sin($dLang/2) * sin($dLang/2);
+            $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad(Auth::user()->lat)) * cos(deg2rad($users[$i]->lat)) * sin($dLang/2) * sin($dLang/2);
             $c = 2* atan2(sqrt($a), sqrt(1-$a));
 
             $users->distanceToMe = $R * $c;
