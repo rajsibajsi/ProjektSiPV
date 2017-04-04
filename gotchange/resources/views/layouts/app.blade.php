@@ -23,7 +23,7 @@
         ]) !!};
         $(document).ready( function() {
             $("#nearMe").click( function() {
-                $(".panel-body a").each( function() {
+                $(".panel-body a span").each( function() {
                     console.log($(this).val());
                 });
             });
