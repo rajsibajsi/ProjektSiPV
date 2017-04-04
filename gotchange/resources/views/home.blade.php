@@ -27,7 +27,7 @@ $(document).ready( function() {
         });
         for (var i = 0; i < distances.length; i++) {
             if (distances[i] < 50) {
-                $(".distance").eq(i).css("display", "none");
+                $(".panel-body > a:nth-child(" + i + ")").css("display", "none");
             };
         };
     });
