@@ -5,15 +5,24 @@
 <script>
 $(function(){
     $('.chatSent').click(function(){
+        $('.chatTitle').text('Messages - Sent Items');
         $('.chatDiv').empty();
 
         $('.chatDiv').load('chat/sent');
     });
 
     $('.chatInbox').click(function(){
+        $('.chatTitle').text('Messages - Inbox');
         $('.chatDiv').empty();
 
         $('.chatDiv').load('chat/inbox');
+    });
+
+    $('.chatNewButton').click(function(){
+        $('.chatTitle').text('New Message');
+        $('.chatDiv').empty();
+
+        $('.chatDiv').load('chat/newMessage');
     });
 });
 </script>
@@ -23,7 +32,7 @@ $(function(){
         <div class="row">
             <div class="col-sm-8">
             	<div class="row" style="border-bottom: black 1px solid; padding-bottom: 10px; padding-left: -20px">
-            		<button type="button" class="btn btn-outline-warning">New Message</button>
+            		<button type="button" class="btn btn-outline-warning chatNewButton">New Message</button>
             	</div>
                 <div class="row">
                 	<h5 class="chatSelection chatInbox">Inbox</h5>
@@ -34,7 +43,7 @@ $(function(){
     </div>
     <div class="col-sm-9">
     	<div class="row" style="border-bottom: black 1px solid;">
-    		<h2>Messages</h2>
+    		<h2 class="chatTitle">Messages</h2>
     	</div>
     	<div class="row chatDiv">
     		<table class="table table-striped">

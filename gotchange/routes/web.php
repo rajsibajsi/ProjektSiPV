@@ -45,6 +45,10 @@ Route::get('updateNumberOfCoins', 'AjaxController@updateNumberOfCoins');
 /* Chat */
 Route::get('/chat', 'ChatController@index')->name("chat");
 
-Route::get('/chat/sent', 'ChatController@sent')->name("sent");
+Route::get('/chat/sent', 'ChatController@sent');
 
-Route::get('/chat/inbox', 'ChatController@inbox')->name("inbox");
+Route::get('/chat/inbox', 'ChatController@inbox');
+
+Route::get('/chat/newMessage', 'ChatController@newMessage');
+
+Route::post('/chat', 'ChatController@sendMessage')->name("chat/sendMessage");
