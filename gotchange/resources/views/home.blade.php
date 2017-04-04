@@ -21,13 +21,14 @@
 <script type="text/javascript">
 $(document).ready( function() {
     $("#nearMe").click( function() {
-        var distances = $(".distance").map(function() {
-            return $(this).text();
-        }).get();
+        var distances = [];
+        $(".distance").each( function() {
+            distances.push($(this).text());
+        });
         for (var i = 0; i < distances.length; i++) {
-            if(distances[i] > 50) {
-                $("panel-body").eq(i).css("display", "none");
-            }
+            if (distances[i] < 50) {
+                $(".panel-body").eq(i).css("display", "none");
+            };
         };
     });
 });
