@@ -12,7 +12,7 @@
     <?php $chat_counter = 1 ?>
     @foreach($chatMessages as $chatMessage)
     <tr>
-        <th scope="row"><?php echo ($chat_counter); ?></th>
+        <th scope="row"><?php echo ($chat_counter); ?><input type="hidden" name="{{ $chatMessage->id }}"></th>
         <td>{{ $chatMessage->sender_name }}</td>
         <td>{{ $chatMessage->subject }}</td>
         <td>{{ $chatMessage->message }}</td>

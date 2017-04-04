@@ -45,6 +45,24 @@ $(function(){
     	<div class="row" style="border-bottom: black 1px solid;">
     		<h2 class="chatTitle">Messages</h2>
     	</div>
+        <div class="row" style="visibility: collapse; height: 0px">
+            <div class="input-group" style="margin-top: 10px">
+                <span class="input-group-addon" id="basic-addon1">Reciever</span>
+                <input type="text" class="form-control" placeholder="Name and Surname" aria-describedby="basic-addon1" name="reciever">
+            </div>
+            <br>
+            <div class="input-group">
+                <span class="input-group-addon" id="basic-addon1">Subject</span>
+                <input type="text" class="form-control" placeholder="Title" aria-describedby="basic-addon1" name="subject">
+            </div>
+            <br>
+            <label for="basic-url">Message</label>
+            <div class="input-group" style="width: 95%">
+                <textarea type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3" rows="5" placeholder="Write something" name="message"></textarea>
+            </div>
+            <br>
+            <button type="submit" class="btn btn-primary">Send</button>
+        </div>
     	<div class="row chatDiv">
     		<table class="table table-striped">
     			<thead class="thead-default">
@@ -60,7 +78,7 @@ $(function(){
                     @foreach($chatMessages as $chatMessage)
                         <?php $chat_counter = 1 ?>
                         <tr>
-                            <th scope="row"><?php echo ($chat_counter); ?></th>
+                            <th scope="row"><?php echo ($chat_counter); ?><input type="hidden" name="{{ $chatMessage->id }}"></th>
                             <td>{{ $chatMessage->sender_name }}</td>
                             <td>{{ $chatMessage->subject }}</td>
                             <td>{{ $chatMessage->message }}</td>
