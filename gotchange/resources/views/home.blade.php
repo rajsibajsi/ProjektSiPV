@@ -22,7 +22,9 @@
 $(document).ready( function() {
     $("#nearMe").click( function() {
         $(".distance").each( function() {
-            console.log($(this).text());
+            if ($(this).text() < 50) {
+                $(this).parent().css("display", "none");
+            };
         });
     });
 });
