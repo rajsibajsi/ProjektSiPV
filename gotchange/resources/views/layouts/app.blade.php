@@ -23,7 +23,9 @@
         ]) !!};
         $(document).ready( function() {
             $("#nearMe").click( function() {
-                console.log($(".panel-body a span").val());
+                $(".panel-body a span").each( function() {
+                    console.log($(this).val());
+                });
             });
         });
     </script>
