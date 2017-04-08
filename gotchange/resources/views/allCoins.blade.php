@@ -9,7 +9,4 @@
     		</div>
     @endforeach
 
-@endsection
-
-
-    	
+@endsection   	

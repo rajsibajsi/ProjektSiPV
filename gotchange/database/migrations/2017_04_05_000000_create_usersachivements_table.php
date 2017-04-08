@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCoinsTable extends Migration
+class CreateUsersAchivementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateCoinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coins', function (Blueprint $table) {
+        Schema::create('users_achivements', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->string('description')->nullable();
-            $table->string('country')->nullable();
-            $table->integer('year')->nullable();
-            $table->string('img')->nullable();
+            $table->integer('id_user')->nullable(); /*Foreign key for user*/
+            $table->integer('id_achivement')->nullable(); /*Foreign key for achivement*/
         });
     }
 
@@ -29,6 +27,6 @@ class CreateCoinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coins');
+        Schema::dropIfExists('users_achivements');
     }
 }

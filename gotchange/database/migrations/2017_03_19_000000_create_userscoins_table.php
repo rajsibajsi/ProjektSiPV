@@ -15,8 +15,9 @@ class CreateUsersCoinsTable extends Migration
     {
         Schema::create('users_coins', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->string('id_user')->nullable(); /*Foreign key for user*/
-            $table->float('id_coin')->nullable(); /*Foreign key for coin name and propreties*/
+            $table->integer('id_user')->nullable(); /*Foreign key for user*/
+            $table->integer('id_coin')->nullable(); /*Foreign key for coin name and propreties*/
+            $table->integer('number_of_coins')->nullable();
         });
     }
 

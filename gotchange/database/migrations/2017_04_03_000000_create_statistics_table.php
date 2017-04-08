@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateCoinsTable extends Migration
+class CreateStatisticsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,12 @@ class CreateCoinsTable extends Migration
      */
     public function up()
     {
-        Schema::create('coins', function (Blueprint $table) {
+        Schema::create('statistics', function (Blueprint $table) {
             $table->increments('id')->unique();
-            $table->string('description')->nullable();
-            $table->string('country')->nullable();
-            $table->integer('year')->nullable();
-            $table->string('img')->nullable();
+            $table->string('user')->nullable(); /*Foreign key for user*/
+            $table->integer('deals')->nullable();
+            $table->integer('allCoins')->nullable();
+            $table->integer('uniqueCoins')->nullable();
         });
     }
 
@@ -29,6 +29,6 @@ class CreateCoinsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('coins');
+        Schema::dropIfExists('statistics');
     }
 }

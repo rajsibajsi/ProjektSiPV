@@ -33,9 +33,21 @@ Route::get('profile/locationShower', 'ProfileController@seeLocation')->name("see
 
 Route::post('profile/addLocation', 'ProfileController@saveLocation')->name("addLocation");
 
-//Route::get('profile', 'ProfileController@dbAllCoins')->name("allCoins");
+/* Ajax calls */
+Route::post('changeAlbumVar', 'AjaxController@index');
 
-/* Login */
-Auth::routes();
+Route::post('getAlbumVar', 'AjaxController@getAlbumSessionVariable');
 
-Route::get('/home', 'HomeController@index');
+Route::get('dbCoinOwner', 'AjaxController@settingOwnership');
+
+Route::get('updateNumberOfCoins', 'AjaxController@updateNumberOfCoins');
+
+/* Chat */
+Route::get('/chat', 'ChatController@index')->name("chat");
+
+Route::get('/chat/sent', 'ChatController@sent')->name("sent");
+
+Route::get('/chat/inbox', 'ChatController@inbox')->name("inbox");
+
+/* Achivements */
+Route::get('/profile/achivements', 'ProfileController@achivements')->name("achievements");

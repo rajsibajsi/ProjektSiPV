@@ -65,6 +65,10 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+
+        DB::table('statistics')
+            ->insert(['user' => $data['name'], 'deals' => '0', 'allCoins' => '0', 'uniqueCoins' => '0']);
+
         return User::create([
             'name' => $data['name'],
             'email' => $data['email'],
@@ -111,6 +115,9 @@ class RegisterController extends Controller
     private function findOrCreateUser($facebookUser)
     {
         $authUser = User::where('email', $facebookUser->email)->first();
+
+        DB::table('statistics')
+            ->insert(['user' => $facebookUser->name, 'deals' => '0', 'allCoins' => '0', 'uniqueCoins' => '0']);
  
         if ($authUser){
             return $authUser;
