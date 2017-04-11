@@ -55,7 +55,7 @@ Route::get('chat/inbox', 'ChatController@inbox');
 
 Route::get('chat/newMessage', 'ChatController@newMessage');
 
-Route::post('chat', 'ChatController@sendMessage')->name("chat/sendMessage");
+Route::post('chat', 'ChatController@sendMessage')->name("sendMessage");
 
 //Route::get('chat', 'ChatController@getCoins')->name("chat/getCoinsForChat");
 
