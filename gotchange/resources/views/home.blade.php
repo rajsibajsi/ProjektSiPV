@@ -28,7 +28,10 @@ $(document).ready( function() {
         for (var i = 0; i < distances.length; i++) {
             if (distances[i] > $("#distanceValue").val()) {
                 $(".panel-body > a:nth-child(" + (i + 1) + ")").css("display", "none");
-            };
+            }
+            else {
+                $(".panel-body > a:nth-child(" + (i + 1) + ")").css("display", "block");
+            }
         };
     });
 });
