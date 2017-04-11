@@ -1,8 +1,7 @@
 <script>
-
 </script>
 
-<form role="form" method="POST">
+<form role="form" method="POST" action="{{ url('sendMessage') }}">
 	{{ csrf_field() }}
 	<div class="input-group" style="margin-top: 10px">
 		<span class="input-group-addon" id="basic-addon1">Reciever</span>
