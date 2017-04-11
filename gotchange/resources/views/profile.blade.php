@@ -121,7 +121,7 @@ $(function(){ //Ready handler
     });
 });
 </script>
-<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<div style="cursor: pointer;" onclick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon-upload"></span></div>
 <div class="container">
     <div class="col-sm-3">
         <div class="row">
