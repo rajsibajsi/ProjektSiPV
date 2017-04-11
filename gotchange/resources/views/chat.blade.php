@@ -24,7 +24,7 @@ $(function(){
         $('.chatTitle').text('New Message');
         $('.chatDiv').empty();
 
-        $('.chatDiv').load('chat/newMessage');
+        $('.chatDiv').load('http://gotchange.sytes.net/chat/newMessage');
     });
 });
 </script>
