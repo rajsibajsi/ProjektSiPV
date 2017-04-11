@@ -9,7 +9,7 @@ $(function(){
 
         $('.chatDiv').empty();
 
-        $('.chatDiv').load('chat/sent');
+        $('.chatDiv').load('http://gotchange.sytes.net/chat/sent');
     });
 
     $('.chatInbox').click(function(){
@@ -17,7 +17,7 @@ $(function(){
 
         $('.chatDiv').empty();
 
-        $('.chatDiv').load('chat/inbox');
+        $('.chatDiv').load('http://gotchange.sytes.net/chat/sent');
     });
 
     $('.chatNewButton').click(function(){
