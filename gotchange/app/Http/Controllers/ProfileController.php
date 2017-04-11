@@ -95,7 +95,7 @@ class ProfileController extends Controller
 
         Session::put(['albumEditing', 'false']);
 
-		return redirect()->route('profile', ['coins'=> $coins, 'users_coins' => $users_coins, 'all' => $all, 'unique'=>$unique]);
+		return redirect('profile')->with(['coins'=> $coins, 'users_coins' => $users_coins, 'all' => $all, 'unique'=>$unique]);
     }
 
     public function seeLocation() {
