@@ -105,29 +105,7 @@ class ProfileController extends Controller
     	return view("locationShower", compact('lat', 'lang'));
     }
 
-    public function achivements() {
-        DB::table('achivements')->insert(['id' => 1, 'description' => 'First coin owned']);
-DB::table('achivements')->insert(['id' => 2, 'description' => '5 coins owned']);
-DB::table('achivements')->insert(['id' => 3, 'description' => '10 coins owned']);
-DB::table('achivements')->insert(['id' => 4, 'description' => '20 coins owned']);
-DB::table('achivements')->insert(['id' => 5, 'description' => '50 coins owned']);
-DB::table('achivements')->insert(['id' => 6, 'description' => '100 coins owned']);
-DB::table('achivements')->insert(['id' => 7, 'description' => 'Fist unique coin']);
-DB::table('achivements')->insert(['id' => 8, 'description' => '5 unique coins']);
-DB::table('achivements')->insert(['id' => 9, 'description' => '10 unique coins']);
-DB::table('achivements')->insert(['id' => 10, 'description' => '20 unique coins']);
-DB::table('achivements')->insert(['id' => 11, 'description' => '50 unique coins']);
-DB::table('achivements')->insert(['id' => 12, 'description' => '100 unique coins']);
-DB::table('achivements')->insert(['id' => 13, 'description' => 'First concluded deal']);
-DB::table('achivements')->insert(['id' => 14, 'description' => '5 concluded deals']);
-DB::table('achivements')->insert(['id' => 15, 'description' => '10 concluded deals']);
-DB::table('achivements')->insert(['id' => 16, 'description' => '20 concluded deals']);
-DB::table('achivements')->insert(['id' => 17, 'description' => '50 concluded deals']);
-DB::table('achivements')->insert(['id' => 18, 'description' => '10 concluded deals']);
-DB::table('achivements')->insert(['id' => 19, 'description' => 'Member for one year']);
-DB::table('achivements')->insert(['id' => 20, 'description' => 'Member for two years']);
-
-        
+    public function achivements() {   
         $User = User::where('email', Auth::user()->email)->get()->first();
         $achivements = DB::select('select * from achivements');
         $users_achivements = DB::select('select * from users_achivements where id_user = ?', [$User->id]);
