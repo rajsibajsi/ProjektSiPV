@@ -6,6 +6,7 @@
 $(function(){
     $('.chatSent').click(function(){
         $('.chatTitle').text('Messages - Sent Items');
+
         $('.chatDiv').empty();
 
         $('.chatDiv').load('chat/sent');
@@ -13,6 +14,7 @@ $(function(){
 
     $('.chatInbox').click(function(){
         $('.chatTitle').text('Messages - Inbox');
+
         $('.chatDiv').empty();
 
         $('.chatDiv').load('chat/inbox');

@@ -2,7 +2,26 @@
 
 @section('content')
 
+<link rel="stylesheet" type="text/css" href="css/customZajc.css">
 <script>
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
 function albumEditButton()
 {
     $.ajax({
@@ -104,10 +123,11 @@ $(function(){ //Ready handler
 });
 </script>
 
+<div style="cursor: pointer;" onclick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon-upload"></span></div>
 <div class="container">
     <div class="col-sm-3">
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-12" style="position: fixed">
                 <div class="row">
                     <h3>{{ Auth::user()->name }}</h3>
                     <h4>{{ Auth::user()->email }}</h4>
@@ -115,17 +135,27 @@ $(function(){ //Ready handler
                 </div>
                 <div class="row">
                     @if (Auth::user()->lat)
-                    <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
+                        <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
                     @else
-                    <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
+                        <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
                     @endif
                 </div>
-                @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
-                    <div class="row"><button type="button" class="btn btn-primary" style="margin-top: 5px;" onclick="albumEditButton()">Edit Album</button></div>
+                @if(Request::path() === 'profile')
+                    <div class="row">
+                        <button type="button" class="btn btn-primary" style="margin-top: 5px;" onclick="albumEditButton()">Edit Album</button></div>
                     <div class="row">
                         <h6 class="AlbumEditStatus">Album editing is <kbd>disabled</kbd></h6>
                     </div>
                 @endif
+                <div class="row">
+                    <h3>Statistics</h3>
+                        <p style="text-align: left;">Deals: 0</p>
+                        <p style="text-align: left;">All coins: {{ $all }}</p>
+                       <p style="text-align: left;">Unique coins: {{ $unique }}</p>
+                </div>
+                <div class="row">
+                    <a roll="button" class="btn btn-link" href="{{ route('achievements') }}">Achievements</a>
+                </div>
             </div>
         </div>
     </div>
@@ -167,7 +197,7 @@ $(function(){ //Ready handler
                         </div>
                         <div>
                             <div class="input-group">
-                                @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
+                                @if(Request::path() === 'profile' || Request::path() === 'addProfile')
                                     <span class="input-group-btn" id="spanMinus">
                                         <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[{{ $coin->id }}]">
                                             <span class="glyphicon glyphicon-minus"></span>
@@ -179,7 +209,8 @@ $(function(){ //Ready handler
                                 @else
                                     <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="1" min="1" max="100" id="inputNumber">
                                 @endif
-                                @if(Request::url() === 'http://localhost:81/ProjektSiPV/gotchange/public/profile')
+
+                                @if(Request::path() === 'profile')
                                     <span class="input-group-btn" id="spanPlus">
                                         <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[{{ $coin->id }}]">
                                             <span class="glyphicon glyphicon-plus"></span>

@@ -37,7 +37,7 @@ return [
 
     'facebook' => [
         'client_id' => '381217792258113',
-        'client_secret' => '15c0126155184f24b73531a38c8ffbe5',
+        'client_secret' => '19bd1c0361149555dff1a28ac64c8d32',
         'redirect' => 'http://gotchange.sytes.net/auth/facebook/callback',
     ],
 
