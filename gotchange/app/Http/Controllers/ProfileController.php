@@ -86,9 +86,16 @@ class ProfileController extends Controller
         $User = User::where('email', Auth::user()->email)->get()->first();
         $users_coins = DB::select('select * from users_coins where id_user = ?', [$User->id]);
 
+        $all = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->sum('number_of_coins');
+        $unique = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->count('id_coin');
+
         Session::put(['albumEditing', 'false']);
 
-		return view('profile', ['coins'=> $coins, 'users_coins' => $users_coins]);
+		return view('profile', ['coins'=> $coins, 'users_coins' => $users_coins, 'all' => $all, 'unique'=>$unique]);
     }
 
     public function seeLocation() {
