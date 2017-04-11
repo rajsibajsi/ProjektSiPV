@@ -47,7 +47,7 @@ Route::get('updateNumberOfCoins', 'AjaxController@updateNumberOfCoins');
 Route::post('getCoinsForChat', 'AjaxController@getCoinsForChat'); //Ajax call for chat search function
 
 /* Chat */
-Route::get('chat', 'ChatController@index')->name("chat");
+Route::get('chat', 'ChatController@index')->name("chaty");
 
 Route::get('chat/sent', 'ChatController@sent');
 
