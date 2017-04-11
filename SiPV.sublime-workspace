@@ -1,0 +1,1035 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"getCoins",
+				"getCoinsForChat"
+			],
+			[
+				"aja",
+				"AjaxController"
+			],
+			[
+				"get",
+				"getCoinsForChat"
+			],
+			[
+				"own",
+				"ownedCoin"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"name",
+				"namespace"
+			],
+			[
+				"sen",
+				"sendMessage"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"CHa",
+				"ChatController"
+			],
+			[
+				"ch",
+				"chatDiv"
+			],
+			[
+				"cha",
+				"chatSent"
+			],
+			[
+				"ret",
+				"returnValue"
+			],
+			[
+				"thu",
+				"thumbnail"
+			],
+			[
+				"th",
+				"thumbnail"
+			],
+			[
+				"num",
+				"number_of_coins"
+			],
+			[
+				"sp",
+				"spanMinus"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"st",
+				"style\tAttr"
+			],
+			[
+				"col",
+				"col-sm-8"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"te",
+				"text-decoration"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"bo",
+				"border-bottom"
+			],
+			[
+				"h",
+				"h5\tTag"
+			],
+			[
+				"use",
+				"users_coins"
+			],
+			[
+				"img",
+				"imgCss"
+			],
+			[
+				"co",
+				"coinID"
+			],
+			[
+				"coid",
+				"coinID"
+			],
+			[
+				"id_",
+				"id_coin"
+			],
+			[
+				"coi",
+				"coinDescription"
+			],
+			[
+				"Aja",
+				"AjaxController"
+			],
+			[
+				"cli",
+				"coinClick"
+			],
+			[
+				"album",
+				"albumEditing"
+			],
+			[
+				"coin",
+				"coinClick"
+			],
+			[
+				"Al",
+				"AlbumEditStatus"
+			],
+			[
+				"Co",
+				"Controller"
+			],
+			[
+				"Contro",
+				"Controllers"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"bu",
+				"buttonAlbumEdit"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
+				"row",
+				"rowCoins"
+			],
+			[
+				"thum",
+				"thumbnailheader"
+			],
+			[
+				"ov",
+				"overflow"
+			],
+			[
+				"ovew",
+				"overflow"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"vi",
+				"view"
+			],
+			[
+				"pod",
+				"podatkiBin"
+			],
+			[
+				"po",
+				"podatkiBin"
+			],
+			[
+				"len",
+				"length"
+			],
+			[
+				"Dc",
+				"DCstolpciVrstice"
+			],
+			[
+				"C",
+				"CosinusDesni"
+			],
+			[
+				"si",
+				"sirina"
+			],
+			[
+				"cik",
+				"cikCakastiPodatki"
+			],
+			[
+				"re",
+				"rezultat"
+			],
+			[
+				"rea",
+				"readingVar"
+			],
+			[
+				"c",
+				"counter"
+			],
+			[
+				"mo",
+				"movY"
+			],
+			[
+				"M",
+				"movX"
+			],
+			[
+				"mov",
+				"movX"
+			],
+			[
+				"Cos",
+				"Cosinus"
+			],
+			[
+				"no",
+				"nowrap"
+			],
+			[
+				"fle",
+				"flex-flow"
+			],
+			[
+				"padi",
+				"padding-top"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"pa",
+				"padding-bottom"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"tra",
+				"transX"
+			],
+			[
+				"trans",
+				"transX"
+			],
+			[
+				"ar",
+				"artex"
+			],
+			[
+				"textr",
+				"texture"
+			],
+			[
+				"Le",
+				"length"
+			],
+			[
+				"ogl",
+				"ogliscaDva"
+			],
+			[
+				"og",
+				"ogljiscaPet"
+			],
+			[
+				"index",
+				"index_buffer"
+			],
+			[
+				"ang",
+				"angleY"
+			],
+			[
+				"buff",
+				"bufferIndices"
+			],
+			[
+				"create",
+				"createBuffer"
+			],
+			[
+				"buffer",
+				"bufferBarva"
+			],
+			[
+				"nj",
+				"najbljizjaTocka"
+			],
+			[
+				"ste",
+				"stevecTockeGruca"
+			],
+			[
+				"en",
+				"endl"
+			],
+			[
+				"mi",
+				"minX"
+			],
+			[
+				"bool",
+				"boolMlin"
+			],
+			[
+				"stanj",
+				"stanjeBrskalnik"
+			],
+			[
+				"za",
+				"zacetek"
+			],
+			[
+				"des",
+				"desno"
+			],
+			[
+				"Z",
+				"zaKompresijo"
+			],
+			[
+				"crni",
+				"crniMozenPremik"
+			],
+			[
+				"beli",
+				"beliMozenPremik"
+			],
+			[
+				"igrl",
+				"igralnaPlosca"
+			],
+			[
+				"igral",
+				"igralnaPlosca"
+			],
+			[
+				"to",
+				"toFen"
+			],
+			[
+				"prev",
+				"preveriMlin"
+			],
+			[
+				"array_key",
+				"array_key_exists"
+			],
+			[
+				"polje",
+				"poljeRazdalj"
+			],
+			[
+				"begi",
+				"begin"
+			],
+			[
+				"iskana",
+				"iskanaBeseda"
+			],
+			[
+				"dol",
+				"dolzinaBesede"
+			],
+			[
+				"iska",
+				"iskanaBeseda"
+			],
+			[
+				"prever",
+				"preveriIgralca"
+			],
+			[
+				"sess",
+				"session_start"
+			],
+			[
+				"klik",
+				"klikEna"
+			],
+			[
+				"stt",
+				"stetjeZacetnihPotez"
+			],
+			[
+				"stanje",
+				"stanjeIgre"
+			],
+			[
+				"sta",
+				"stanjaIgre"
+			],
+			[
+				"jsn",
+				"json_encode"
+			],
+			[
+				"el",
+				"else"
+			],
+			[
+				"temp",
+				"tempIzpis"
+			],
+			[
+				"pos",
+				"postavitev"
+			],
+			[
+				"zace",
+				"zacetekIgre"
+			],
+			[
+				"igra",
+				"igralnaPlosca"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"igraln",
+				"igralnaPlosca"
+			],
+			[
+				"P",
+				"_POST"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"upo",
+				"uporabnik"
+			],
+			[
+				"result",
+				"result2"
+			],
+			[
+				"vrsta",
+				"vrsta2"
+			],
+			[
+				"mysqli_fet",
+				"mysqli_fetch_assoc"
+			],
+			[
+				"do",
+				"dovoljenja"
+			],
+			[
+				"dolzi",
+				"dolzinaIskalnegaNiza"
+			],
+			[
+				"be",
+				"besedilo"
+			],
+			[
+				"kmp",
+				"kmpNext"
+			],
+			[
+				"pre",
+				"prefixCounter"
+			],
+			[
+				"ID",
+				"IDoglasa"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "gotchange/app/Http/Controllers/ChatController.php",
+			"settings":
+			{
+				"buffer_size": 1243,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "<script>\n$(function(){\n\t$('.ownedCoin').keyup(function(){\n\t\t$.ajax({\n\t\t\ttype: 'POST',\n\t\t\turl: 'getCoinsForChat'\n\t\t\tdata: $(this).val(),\n\t\t\tsuccess: function(data){\n\t\t\t\t$('.suggestions').empty();\n\n        \t\t$('.suggestions').load('chat/showCoins');\n\t\t\t}\n\t\t});\n\t\t//name: 'ownedCoin',\n\t\t//remote: '{{ route(\"chat/getCoinsForChat\") }}'\n\t});\n});\n</script>\n\n<form role=\"form\" method=\"POST\" action=\"{{ route('chat/sendMessage') }}\">\n\t{{ csrf_field() }}\n\t<div class=\"input-group\" style=\"margin-top: 10px\">\n\t\t<span class=\"input-group-addon\" id=\"basic-addon1\">Reciever</span>\n\t\t<input type=\"text\" class=\"form-control\" placeholder=\"Name and Surname\" aria-describedby=\"basic-addon1\" name=\"reciever\">\n\t</div>\n\t<br>\n\t<div class=\"input-group\">\n\t\t<span class=\"input-group-addon\" id=\"basic-addon1\">Subject</span>\n\t\t<input type=\"text\" class=\"form-control\" placeholder=\"Title\" aria-describedby=\"basic-addon1\" name=\"subject\">\n\t</div>\n\t<br>\n\t<label for=\"basic-url\">Message</label>\n\t<div class=\"input-group\" style=\"width: 95%\">\n\t\t<textarea type=\"text\" class=\"form-control\" id=\"basic-url\" aria-describedby=\"basic-addon3\" rows=\"5\" placeholder=\"Write something\" name=\"message\"></textarea>\n\t</div>\n\t<br>\n\t<div class=\"newRequest\" style=\"margin-bottom: 10px\">\n\t\t<h5>Name or id of coin you want to trade with</h5>\n\t\t<input type=\"text\" name=\"ownedCoin\" size=\"30\" class=\"form-control col-sm-4 ownedCoin\" placeholder=\"Please enter coin name or id you own\">\n\t\t<div id=\"suggestions\"></div>\n\t</div>\n\t<button type=\"button\" class=\"btn btn-primary\">Add Request</button>\n\t<button type=\"submit\" class=\"btn btn-primary\">Send</button>\n</form>",
+			"file": "gotchange/resources/views/chat_new.blade.php",
+			"file_size": 1422,
+			"file_write_time": 131359428775589205,
+			"settings":
+			{
+				"buffer_size": 1600,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gotchange/routes/web.php",
+			"settings":
+			{
+				"buffer_size": 1877,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "gotchange/resources/views/chat.blade.php",
+			"settings":
+			{
+				"buffer_size": 3421,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/UwAmp/www/ProjektSiPV",
+		"/D/UwAmp/www/ProjektSiPV/gotchange",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Controllers",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Middleware",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/database",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/database/migrations",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/public",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/lang",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/auth",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/routes"
+	],
+	"file_history":
+	[
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/chat_inbox.blade.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/chat_sent_items.blade.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/vendor/nesbot/carbon/readme.md",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/database/migrations/2017_03_19_000000_create_userscoins_table.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Controllers/AjaxController.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/profile.blade.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Controllers/ProfileController.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/database/migrations/2017_03_28_000000_create_chat_table.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/public/css/customFoger.css",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/routes/web.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/layouts/app.blade.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Middleware/VerifyCsrfToken.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/routes/api.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/layouts/sessionVarAlbumChanges.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/allCoins.blade.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/public/sessionVarAlbumChanges.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/database/migrations/2017_03_18_000000_create_coins_table.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/resources/views/welcome.blade.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Controllers/Auth/LoginController.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Controllers/LoginController.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Http/Controllers/HomeController.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/database/migrations/2017_03_16_112644_create_sessions_table.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/config/database.php",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/.env",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/app/Console/Kernel.php",
+		"/D/Prenosi - Firefox/env",
+		"/D/UwAmp/www/ProjektSiPV/gotchange/bootstrap/autoload.php",
+		"/C/Users/Luka/Documents/GitHub/ProjektSiPV/gotchange/database/migrations/2014_10_12_000000_create_users_table.php",
+		"/C/Users/Luka/Documents/GitHub/ProjektSiPV/gotchange/database/migrations/2017_03_16_112644_create_sessions_table.php",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/M/primer_vaja4/primer_vaja4/dekompresija.html",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/M/primer_vaja4/primer_vaja4/indexgl.html",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/M/zvok.html",
+		"/C/Users/Luka/Desktop/dekompresija.html",
+		"/D/UwAmp/www/stran1/index.html",
+		"/D/UwAmp/www/stran1/index.css",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/M/primer_vaja4/primer_vaja4/three.min.js",
+		"/D/UwAmp/www/LoadBlender/shader.vs.glsl",
+		"/D/UwAmp/www/LoadBlender/gl.js",
+		"/D/UwAmp/www/LoadBlender/index.html",
+		"/D/UwAmp/www/LoadBlender/shader.fs.glsl",
+		"/D/UwAmp/www/LoadBlender/util.js",
+		"/D/UwAmp/www/LoadBlender/valj.json",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/Vaja_3/vaja3.html",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/LoadBlender/LoadBlender/index.html",
+		"/D/UwAmp/www/LoadBlender/app.js",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/LoadBlender/LoadBlender/app.js",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/LoadBlender/LoadBlender/util.js",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/LoadBlender/LoadBlender/gl-matrix.js",
+		"/C/Users/Luka/Downloads/usbd_cdc_if.c",
+		"/C/Users/Luka/Downloads/main.c",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/Pro/MiniProjekt/Mlin/kalkulator/kalkulator.c",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/M/Vaja_02/simplebmp.h",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/Vaja_3/Vaja_3_WebGL_template/js/gldemo.js",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/Vaja_3/Vaja_3_WebGL_template/index.html",
+		"/C/Users/Luka/Desktop/blah.html",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/RG/Vaja_3/Vaja_3_WebGL_template/js/utils.js",
+		"/C/Users/Luka/Downloads/Source.cpp",
+		"/C/Users/Luka/Desktop/FERI/3. letnik/M/Vaja01_CT/stisnjeno.cmp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/PPJ/vaja02/vaja02.cpp",
+		"/D/UwAmp/www/vajaOglas/script.js",
+		"/D/UwAmp/www/vajaOglas/podalsaj.php",
+		"/D/UwAmp/www/vajaOglas/oglas.php",
+		"/D/UwAmp/www/vajaOglas/registracijaUporabnika.php",
+		"/D/UwAmp/www/vajaOglas/registracija.php",
+		"/D/UwAmp/www/vajaOglas/oddajOglas.php",
+		"/D/UwAmp/www/vajaOglas/novOglas.php",
+		"/D/UwAmp/www/vajaOglas/index.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/PPJ/vaja02/main.cpp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/ARA/Vaja1/vaja01.cpp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/ARA/Vaja2/vaja02.cpp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/ARA/Vaja5/vaja05.cpp",
+		"/D/ARA/vaja05.cpp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/pravilaIgre.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/negamax.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/serverIgra.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/strani/igraj.php",
+		"/C/Users/Luka/Desktop/vaja04.cpp",
+		"/C/Users/Luka/Desktop/vaja02.cpp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/ARA/Vaja4/vaja04.cpp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/potekIgre.php",
+		"/C/Users/Luka/Downloads/LocalSettings-1.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/strani/o_igri.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/strani/index.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/strani/wp-blog-header.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/strani/wp-load.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/strani/wp-config.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/layout.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/views/strani/domov.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/server.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/assets/jsProjekt/script.js",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/controllers/uporabniki_controller.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/models/uporabnik.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/script.js",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlinOddaja/mlin/server.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlinOddaja/mlin/views/uporabniki/klepet.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/layout.php",
+		"/C/Users/Luka/Desktop/potekIgre.php",
+		"/C/Users/Luka/Desktop/pravilaIgre.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/ARA/Vaja3/vaja03.cpp",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/pravilnaPoteza.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/script.js",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/mlin/pravilnaPoteza.php",
+		"/D/UwAmp/www/vajaOglas/rest.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/whoami.php",
+		"/D/UwAmp/www/vaja01/pridobiStevilo.php",
+		"/D/UwAmp/www/vaja01/script.js",
+		"/D/UwAmp/www/vaja01/generiranje.php",
+		"/D/UwAmp/www/vajaOglas/restPHP.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/layout.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/domov.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/connection.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/main.js",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/index.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/routes.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/strani_controller.php",
+		"/C/Users/Luka/Desktop/FERI/2. letnik/Projekt/connect.php",
+		"/D/UwAmp/www/vajaOglas/views/uporabniki/prikazi.php",
+		"/D/UwAmp/www/vajaOglas/models/uporabnik.php",
+		"/D/UwAmp/www/vajaOglas/views/uporabniki/index.php",
+		"/D/UwAmp/www/vajaOglas/controllers/uporabniki_controller.php",
+		"/D/UwAmp/www/vajaOglas/views/uporabniki/uredi.php",
+		"/D/UwAmp/www/vajaOglas/views/uporabniki/uspesnoDodal.php",
+		"/D/UwAmp/www/vajaOglas/controllers/strani_controller.php",
+		"/D/UwAmp/www/vajaOglas/mvc.php",
+		"/D/UwAmp/www/vajaOglas/views/uporabniki/dodaj.php",
+		"/D/UwAmp/www/vajaOglas/views/layout.php",
+		"/D/UwAmp/www/vajaOglas/mvcRoutes.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"strtolower",
+			"input",
+			"razbijCikCak",
+			"cikCak",
+			"R",
+			"susanIndexBufferObject",
+			"susanTexCoordVertexBufferObject",
+			"susanTexCoords",
+			"susanIndices",
+			"susanVertices",
+			"susanPosVertexBufferObject",
+			"SusanModel",
+			"SusanImage",
+			"SusanModel",
+			"klikEna",
+			"$_SESSION",
+			"SESSIOn",
+			"\"Ne premikate svojega žetona\"",
+			"Ne premika",
+			"List",
+			"stListov",
+			"direktorij",
+			"datoteka",
+			"prenos",
+			"hitrost",
+			"risi",
+			"visinaPlatna",
+			"sirinaPlatna",
+			"ctx",
+			"conte$it",
+			"x",
+			"my_gradient",
+			"gradient",
+			"ctx",
+			"dSpan",
+			"resn",
+			"res",
+			"x",
+			"vnos",
+			"mjaw"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"oSheet",
+			"$canvas_height",
+			"$canvas_width",
+			"$canvas",
+			"$i",
+			"$gradient",
+			"my_gradient",
+			"$canvas",
+			"$risanje",
+			"rac_ses",
+			"plus",
+			"P_stevil",
+			"sez",
+			"stevilo",
+			"counter"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": true,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "gotchange/app/Http/Controllers/ChatController.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1243,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1243,
+								1243
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 182.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "gotchange/resources/views/chat_new.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1600,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "gotchange/routes/web.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1877,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1484,
+								1484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 564.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "gotchange/resources/views/chat.blade.php",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								404,
+								339
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/PHP/PHP.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "SiPV.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 251.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
