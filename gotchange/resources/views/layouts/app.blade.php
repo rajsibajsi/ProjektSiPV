@@ -70,7 +70,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('chaty') }}">
+                                        <a href="{{ url('chat') }}">
                                             Chat
                                         </a>
                                     </li>
