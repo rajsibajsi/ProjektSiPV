@@ -70,7 +70,7 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a href="{{ route('chat') }}">
+                                        <a href="{{ route('achievements') }}">
                                             Chat
                                         </a>
                                     </li>
