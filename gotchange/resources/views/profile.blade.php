@@ -195,7 +195,7 @@ $(function(){ //Ready handler
                         </div>
                         <div>
                             <div class="input-group">
-                                @if(Request::path() === 'profile')
+                                @if(Request::path() === 'profile' || Request::path() === 'addProfile')
                                     <span class="input-group-btn" id="spanMinus">
                                         <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[{{ $coin->id }}]">
                                             <span class="glyphicon glyphicon-minus"></span>
