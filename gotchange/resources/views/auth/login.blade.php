@@ -60,10 +60,6 @@
                             </div>
                         </div>
                     </form>
-                    <span id="titleUnderlineLogin"></span> 
-                    <a roll="button" class="btn btn-primary" href="{{ url('/auth/facebook') }}">
-                        <div class="fbButton">Login with Facebook</div>
-                    </a>
                 </div>
             </div>
         </div>

@@ -27,5 +27,27 @@ Route::get('auth/facebook/callback', 'Auth\RegisterController@handleProviderCall
 /* Profile */
 Route::get('profile', 'ProfileController@index')->name("profile");
 
-Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("addLocation");
+Route::get('profile/locationSelector', 'ProfileController@goToLocation')->name("goToLocation");
+//AIzaSyC3eL-GsH6hRmRWt9cwYJrONLkGcJCdrxQ
+Route::get('profile/locationShower', 'ProfileController@seeLocation')->name("seeLocation");
 
+Route::post('profile/addLocation', 'ProfileController@saveLocation')->name("addLocation");
+
+/* Ajax calls */
+Route::post('changeAlbumVar', 'AjaxController@index');
+
+Route::post('getAlbumVar', 'AjaxController@getAlbumSessionVariable');
+
+Route::get('dbCoinOwner', 'AjaxController@settingOwnership');
+
+Route::get('updateNumberOfCoins', 'AjaxController@updateNumberOfCoins');
+
+/* Chat */
+Route::get('/chat', 'ChatController@index')->name("chat");
+
+Route::get('/chat/sent', 'ChatController@sent')->name("sent");
+
+Route::get('/chat/inbox', 'ChatController@inbox')->name("inbox");
+
+/* Achivements */
+Route::get('/profile/achivements', 'ProfileController@achivements')->name("achievements");
