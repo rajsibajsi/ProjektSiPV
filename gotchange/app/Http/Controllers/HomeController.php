@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use DB;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,24 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $users = User::where('id', '!=', Auth::user()->id)->get();
+
+        for ($i=0; $i < count($users) - 1; $i++) { 
+            //$distance = rad2deg(acos((sin(deg2rad(Auth::user()->lat))*sin(deg2rad($users[$i]->lat))) + (cos(deg2rad(Auth::user()->lat))*cos(deg2rad($users[$i]->lat))*cos(deg2rad(Auth::user()->lang-$users[$i]->long)))));
+            //$users[$i]->distanceToMe = $distance * 111.13384;
+            $R = 6371;
+            $dLat = deg2rad(Auth::user()->lat - $users[$i]->lat);
+            $dLang = deg2rad(Auth::user()->lang - $users[$i]->lang);
+            $a = sin($dLat/2) * sin($dLat/2) + cos(deg2rad(Auth::user()->lat)) * cos(deg2rad($users[$i]->lat)) * sin($dLang/2) * sin($dLang/2);
+            $c = 2* atan2(sqrt($a), sqrt(1-$a));
+
+            $users[$i]->distanceToMe = $R * $c;
+        }
+
+        $sorted = $users->sortBy('distanceToMe');
+
+        return view('home', ['users' => $sorted]);
     }
 }
+
+//$degrees = rad2deg(acos((sin(deg2rad($point1_lat))*sin(deg2rad($point2_lat))) + (cos(deg2rad($point1_lat))*cos(deg2rad($point2_lat))*cos(deg2rad($point1_long-$point2_long)))));
