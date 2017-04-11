@@ -42,6 +42,8 @@ Route::get('dbCoinOwner', 'AjaxController@settingOwnership');
 
 Route::get('updateNumberOfCoins', 'AjaxController@updateNumberOfCoins');
 
+Route::post('getCoinsForChat', 'AjaxController@getCoinsForChat'); //Ajax call for chat search function
+
 /* Chat */
 Route::get('/chat', 'ChatController@index')->name("chat");
 
@@ -52,3 +54,5 @@ Route::get('/chat/inbox', 'ChatController@inbox');
 Route::get('/chat/newMessage', 'ChatController@newMessage');
 
 Route::post('/chat', 'ChatController@sendMessage')->name("chat/sendMessage");
+
+Route::get('/chat', 'ChatController@getCoins')->name("chat/getCoinsForChat");
