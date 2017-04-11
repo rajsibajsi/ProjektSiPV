@@ -5,7 +5,7 @@
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
-                <div class="panel-heading"><div class="row"><div class="col-sm-10">Users</div><div id="nearMe" style="text-align:right; cursor: pointer;" class="col-sm-2"><span class="glyphicon glyphicon-map-marker"></span><p>Near me</p><input style="float: right; max-width: 50px;" value="50" type="text" id="distanceValue"></div></div></div>
+                <div class="panel-heading"><div class="row"><div class="col-sm-10">Users</div><div style="text-align:right; cursor: pointer;" class="col-sm-2"><span class="glyphicon glyphicon-map-marker"></span><span id="nearMeButton">Near me</span><input style="float: right; max-width: 50px;" value="50" type="text" id="distanceValue"></div></div></div>
 
                 <div class="panel-body">
                     @if( ! empty($users) )
@@ -20,7 +20,7 @@
 </div>
 <script type="text/javascript">
 $(document).ready( function() {
-    $("#nearMe p").click( function() {
+    $("#nearMeButton").click( function() {
         var distances = [];
         $(".distance").each( function() {
             distances.push($(this).text());
