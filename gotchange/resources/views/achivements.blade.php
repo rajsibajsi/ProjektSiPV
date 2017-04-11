@@ -53,9 +53,9 @@ function topFunction() {
                             @endforeach
 
                             @if($userHasAchivement === 'true')
-                                <img src="\ProjektSiPV\gotchange\public\img\star.png" alt="Failed to load img" width="100px" height="100px" style="display: block; margin-left: auto; margin-right: auto; opacity: 1.0">
+                                <img src="{{ asset('img/star.png') }}" alt="Failed to load img" width="100px" height="100px" style="display: block; margin-left: auto; margin-right: auto; opacity: 1.0">
                             @else
-                                <img src="\ProjektSiPV\gotchange\public\img\star.png" alt="Failed to load img" width="100px" height="100px" style="display: block; margin-left: auto; margin-right: auto; opacity: 0.1">
+                                <img src="{{ asset('img/star.png') }}" alt="Failed to load img" width="100px" height="100px" style="display: block; margin-left: auto; margin-right: auto; opacity: 0.1">
                             @endif                            
                             <div class="thumbnailheader" style="text-align: center; display: block; text-overflow: ellipsis; word-wrap: break-word; overflow: hidden; height: 3.6em; line-height: 1.8em;">{{ $achivement->description }}</div>
                         </div>
