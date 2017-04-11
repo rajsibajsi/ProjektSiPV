@@ -1,10 +1,5 @@
 <script>
-/*$(function(){
-	$('.ownedCoin').typeahead({
-		name: 'ownedCoin',
-		remote: '{{ route("chat/getCoinsForChat") }}'
-	});
-});*/
+
 </script>
 
 <form role="form" method="POST">
