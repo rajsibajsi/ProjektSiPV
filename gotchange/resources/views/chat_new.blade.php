@@ -7,7 +7,7 @@ $(function(){
 });
 </script>
 
-<form role="form" method="POST" action="{{ route('sendMessage') }}">
+<form role="form" method="POST" action="{{ url('chat/sendMessage') }}">
 	{{ csrf_field() }}
 	<div class="input-group" style="margin-top: 10px">
 		<span class="input-group-addon" id="basic-addon1">Reciever</span>
