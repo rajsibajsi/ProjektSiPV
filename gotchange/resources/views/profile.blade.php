@@ -221,8 +221,10 @@ $(function(){ //Ready handler
                         </div>
                     </div>
                 </div>
-                <div class="clearfix visible-sm"></div>
                 <?php $var += 1 ?>
+                @if ($var === 2) 
+                    <div class="clearfix visible-sm"></div>
+                @endif
                 @if ($var === 4)
                     </div>
                     <?php $var = 0 ?>
