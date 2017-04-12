@@ -34,12 +34,19 @@
 	 position: fixed;
 }
 
+#statistics {
+	text-align: left;
+}
+
 @media only screen and (max-width: 768px) {
 	body {
 		text-align: center;
 	}
 	#userInfo {
 		position: relative;
+	}
+	#statistics {
+		text-align: center;
 	}
     .albumDash {
 		display: block;
