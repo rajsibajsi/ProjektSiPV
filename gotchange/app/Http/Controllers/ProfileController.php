@@ -67,7 +67,10 @@ class ProfileController extends Controller
 
     public function others($id) {
         $User = User::where('id', $id)->get()->first();
-        return view("others", ['name' => $User->name, 'email' => $User->email, 'date' => $User->created_at, 'lat' => $User->lat]);
+        $coins = DB::select('select * from coins');
+        $users_coins = DB::select('select * from users_coins where id_user = ?', [$User->id]);
+
+        return view("others", ['name' => $User->name, 'email' => $User->email, 'date' => $User->created_at, 'lat' => $User->lat, 'users_coins' => $users_coins, 'coins'=> $coins]);
     }
 
     public function goToLocation() {
