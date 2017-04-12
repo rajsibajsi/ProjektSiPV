@@ -167,7 +167,7 @@ $(function(){ //Ready handler
             <?php $var = 0 ?>
             @foreach($coins as $coin)
                 @if ($var === 0)
-                    <div style="display: flex;">
+                    <div class="albumDash">
                 @endif
                 <div class="col-sm-6 col-md-3" style="margin-right: -15px; margin-left: -15px; margin-bottom: -22px;">
                     <div class="thumbnail">

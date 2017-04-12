@@ -25,3 +25,13 @@
 #profileTitle h2 {
 	float: left;
 }
+
+.albumDash {
+	display: flex;
+}
+
+@media only screen and (max-width: 768px) {
+    .albumDash {
+		display: block;
+	}
+}
