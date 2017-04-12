@@ -34,4 +34,7 @@
     .albumDash {
 		display: block;
 	}
+	.coinClick {
+		min-width: 200px;
+	}
 }
