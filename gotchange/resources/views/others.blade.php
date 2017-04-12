@@ -26,8 +26,8 @@
                 <div class="col-sm-6 col-md-3" style="margin-right: -15px; margin-left: -15px; margin-bottom: -22px;">
                     <div class="thumbnail">
                         <div class="coinClick">
-                            @foreach($users_coins as $users_coin)
                             <?php $userHasCoin = 'false' ?>
+                            @foreach($users_coins as $users_coin)
                                 @if($users_coin->id_coin === $coin->id)
                                     <?php $userHasCoin = 'true' ?>
                                 @endif
