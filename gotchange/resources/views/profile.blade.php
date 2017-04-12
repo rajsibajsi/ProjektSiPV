@@ -149,9 +149,9 @@ $(function(){ //Ready handler
                 @endif
                 <div id="statistics" class="row"> 
                     <h3>Statistics</h3>
-                        <p style="text-align: left;">Deals: 0</p>
-                        <p style="text-align: left;">All coins: {{ $all }}</p>
-                       <p style="text-align: left;">Unique coins: {{ $unique }}</p>
+                        <p>Deals: 0</p>
+                        <p>All coins: {{ $all }}</p>
+                        <p>Unique coins: {{ $unique }}</p>
                 </div>
                 <div class="row">
                     <a roll="button" class="btn btn-link" href="{{ route('achievements') }}">Achievements</a>
