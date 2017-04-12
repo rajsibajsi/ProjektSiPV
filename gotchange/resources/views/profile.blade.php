@@ -147,7 +147,7 @@ $(function(){ //Ready handler
                         <h6 class="AlbumEditStatus">Album editing is <kbd>disabled</kbd></h6>
                     </div>
                 @endif
-                <div class="row">
+                <div id="statistics" class="row"> 
                     <h3>Statistics</h3>
                         <p style="text-align: left;">Deals: 0</p>
                         <p style="text-align: left;">All coins: {{ $all }}</p>
