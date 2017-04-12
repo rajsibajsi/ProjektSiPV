@@ -125,7 +125,7 @@ $(function(){ //Ready handler
 
 <div style="cursor: pointer;" onclick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon-upload"></span></div>
 <div class="container">
-    <div class="col-sm-3">
+    <div class="col-sm-12 col-md-3">
         <div class="row">
             <div class="col-sm-12" style="position: fixed">
                 <div class="row">
@@ -159,7 +159,7 @@ $(function(){ //Ready handler
             </div>
         </div>
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-12 col-md-9">
         <div id="profileTitle" class="row">
             <h2>Album</h2>
         </div>
