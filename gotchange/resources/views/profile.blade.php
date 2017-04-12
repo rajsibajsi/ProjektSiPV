@@ -127,7 +127,7 @@ $(function(){ //Ready handler
 <div class="container">
     <div class="col-sm-12 col-md-3">
         <div class="row">
-            <div class="col-sm-12" style="position: fixed">
+            <div id="userInfo" class="col-sm-12" style="position: fixed">
                 <div class="row">
                     <h3>{{ Auth::user()->name }}</h3>
                     <h4>{{ Auth::user()->email }}</h4>

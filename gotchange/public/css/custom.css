@@ -30,11 +30,19 @@
 	display: flex;
 }
 
+#userInfo {
+	 position: fixed;
+}
+
 @media only screen and (max-width: 768px) {
+	#userInfo {
+		position: relative;
+	}
     .albumDash {
 		display: block;
 	}
 	.coinClick {
 		min-width: 200px;
 	}
+
 }
