@@ -27,6 +27,7 @@
                     <div class="thumbnail">
                         <div class="coinClick">
                             @foreach($users_coins as $users_coin)
+                            <?php $userHasCoin = 'false' ?>
                                 @if($users_coin->id_coin === $coin->id)
                                     <?php $userHasCoin = 'true' ?>
                                 @endif
