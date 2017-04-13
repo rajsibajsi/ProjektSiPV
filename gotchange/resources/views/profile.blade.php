@@ -121,6 +121,20 @@ $(function(){ //Ready handler
             }
         });
     });
+
+    // Ratings
+    $('#starRating').barrating({
+        theme: 'fontawesome-stars',
+        onSelect: function(value, text, event) {
+            if (typeof(event) !== 'undefined') {
+                // rating was selected by a user
+                console.log(event.target);
+            } else {
+                // rating was selected programmatically
+                // by calling `set` method
+            } 
+        }
+    });
 });
 </script>
 
@@ -156,6 +170,28 @@ $(function(){ //Ready handler
                 </div>
                 <div class="row">
                     <a roll="button" class="btn btn-link" href="{{ route('achievements') }}">Achievements</a>
+                </div>
+                <div id="rating" class="row">
+                    <div class="starRating">
+                        <p>It can be used to display fractional star ratings.</p>
+                        <div class="stars stars-example-fontawesome-o">
+                            <select id="example-fontawesome-o" name="rating" data-current-rating="4.5" autocomplete="off">
+                                <option value=""></option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <span class="title current-rating">
+                                Current rating: <span class="value"></span>
+                            </span>
+                            <span class="title your-rating hidden">
+                                Your rating: <span class="value"></span>&nbsp;
+                                <a href="#" class="clear-rating"><i class="fa fa-times-circle"></i></a>
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
