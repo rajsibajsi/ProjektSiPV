@@ -61,3 +61,10 @@ Route::post('chat/sendMessage', 'ChatController@sendMessage');
 
 /* Achivements */
 Route::get('profile/achivements', 'ProfileController@achivements')->name("achievements");
+
+/* Sort */
+Route::get('profile/sortYear', 'ProfileController@sortByYear')->name("sortByYear");
+
+Route::get('profile/sortCountry', 'ProfileController@sortByCountry')->name("sortByCountry");
+
+Route::get('profile/sortOwned', 'ProfileController@sortByOwned')->name("sortByOwned");
