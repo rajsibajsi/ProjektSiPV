@@ -1,13 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<script type="text/javascript">
-/*   $(function() {
-      $('#example').barrating({
-        theme: 'fontawesome-stars'
-      });
-   });*/
-</script>
+
 <script>
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -23,8 +17,9 @@ function scrollFunction() {
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
-    document.body.scrollTop = 0;
-    document.documentElement.scrollTop = 0;
+    $("html, body").animate({ scrollTop: 0 }, 400);
+    /*document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;*/
 }
 
 function albumEditButton()
@@ -129,9 +124,9 @@ $(function(){ //Ready handler
 </script>
 <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <div class="container">
-    <div class="col-sm-3">
+    <div class="col-sm-12 col-md-3">
         <div class="row">
-            <div class="col-sm-12" style="position: fixed">
+            <div id="userInfo" class="col-sm-12">
                 <div class="row">
                     <h3>{{ Auth::user()->name }}</h3>
                     <h4>{{ Auth::user()->email }}</h4>
@@ -151,11 +146,11 @@ $(function(){ //Ready handler
                         <h6 class="AlbumEditStatus">Album editing is <kbd>disabled</kbd></h6>
                     </div>
                 @endif
-                <div class="row">
+                <div id="statistics" class="row"> 
                     <h3>Statistics</h3>
-                        <p style="text-align: left;">Deals: 0</p>
-                        <p style="text-align: left;">All coins: {{ $all }}</p>
-                       <p style="text-align: left;">Unique coins: {{ $unique }}</p>
+                        <p>Deals: 0</p>
+                        <p>All coins: {{ $all }}</p>
+                        <p>Unique coins: {{ $unique }}</p>
                 </div>
                 <div class="row">
                     <a roll="button" class="btn btn-link" href="{{ route('achievements') }}">Achievements</a>
@@ -163,7 +158,7 @@ $(function(){ //Ready handler
             </div>
         </div>
     </div>
-    <div class="col-sm-9">
+    <div class="col-sm-12 col-md-9">
         <div id="profileTitle" class="row">
             <div class="col-sm-8">
                 <h2>Album</h2>
@@ -181,7 +176,7 @@ $(function(){ //Ready handler
             <?php $var = 0 ?>
             @foreach($coins as $coin)
                 @if ($var === 0)
-                    <div style="display: flex;">
+                    <div class="row">
                 @endif
                 <div class="col-sm-6 col-md-3" style="margin-right: -15px; margin-left: -15px; margin-bottom: -22px;">
                     <div class="thumbnail">
@@ -235,6 +230,9 @@ $(function(){ //Ready handler
                     </div>
                 </div>
                 <?php $var += 1 ?>
+                @if ($var === 2) 
+                    <div class="clearfix visible-sm"></div>
+                @endif
                 @if ($var === 4)
                     </div>
                     <?php $var = 0 ?>
