@@ -148,4 +148,67 @@ class ProfileController extends Controller
 
         return view('achivements', ['achivements'=> $achivements, 'users_achivements' => $praviDosezki]);
     }
+
+        public function sortByYear() {
+                
+        $User = User::where('email', Auth::user()->email)->get()->first();
+        $users_coins = DB::select('select * from users_coins where id_user = ?', [$User->id]);
+        $all = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->sum('number_of_coins');
+        $unique = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->count('id_coin');
+
+        Session::put(['albumEditing', 'false']);
+
+        $sortirano = DB::table('coins')->select('*')->orderBy('year', 'asc')->get();
+
+        return view('profile', ['coins'=> $sortirano, 'users_coins' => $users_coins, 'all' => $all, 'unique'=>$unique]);
+    }
+
+    public function sortByCountry() {
+
+        $User = User::where('email', Auth::user()->email)->get()->first();
+        $users_coins = DB::select('select * from users_coins where id_user = ?', [$User->id]);
+        $all = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->sum('number_of_coins');
+        $unique = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->count('id_coin');
+
+        Session::put(['albumEditing', 'false']);
+
+        $sortirano = DB::table('coins')->select('*')->orderBy('country', 'asc')->get();
+
+        return view('profile', ['coins'=> $sortirano, 'users_coins' => $users_coins, 'all' => $all, 'unique'=>$unique]);
+    }
+
+    public function sortByOwned() {
+
+        $coins = DB::select('select * from coins');
+        $User = User::where('email', Auth::user()->email)->get()->first();
+        $users_coins = DB::select('select * from users_coins where id_user = ?', [$User->id]);
+        $all = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->sum('number_of_coins');
+        $unique = DB::table('users_coins')
+                     ->where('id_user', [$User->id])
+                     ->count('id_coin');
+
+        $skupno = array();
+            foreach($coins as $coin)
+                foreach($users_coins as $users_coin)
+                    if($users_coin->id_coin === $coin->id)
+                        array_unshift($skupno, $coin);
+                    else
+                        array_push($skupno, $coin);
+
+        $skupno = array_unique($skupno, SORT_REGULAR);
+
+        Session::put(['albumEditing', 'false']);
+
+        return view('profile', ['coins'=> $skupno, 'users_coins' => $users_coins, 'all' => $all, 'unique'=>$unique]);
+    }
 }
