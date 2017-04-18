@@ -10,7 +10,8 @@
                 <div class="panel-body">
                     @if( ! empty($users) )
                         @foreach ($users as $user)
-                            <a style="text-decoration: none;" href="{{ url('profile/' . $user->id) }}"><h4 style="color: black; padding-bottom: 20px; padding-top: 10px; border-bottom: 1px solid #f5f8fa;">{{ $user->name }}</h4><span class="distance" >{{ $user->distanceToMe }}</span></a>
+                            <a style="text-decoration: none;" href="{{ url('profile/' . $user->id) }}"><h4 style="color: black; padding-bottom: 20px; padding-top: 10px; border-bottom: 1px solid #f5f8fa;">{{ $user->name }}</h4></a>
+                            <span class="distance">{{ $user->distanceToMe }} km</span>
                         @endforeach
                     @endif
                 </div>
