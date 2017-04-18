@@ -25,3 +25,37 @@
 #profileTitle h2 {
 	float: left;
 }
+
+.albumDash {
+	display: flex;
+}
+
+#userInfo {
+	 position: fixed;
+}
+
+#statistics {
+	text-align: left;
+}
+
+.distance {
+	display: none;
+}
+
+@media only screen and (max-width: 795px) {
+	body {
+		text-align: center;
+	}
+	#userInfo {
+		position: relative;
+	}
+	#statistics {
+		text-align: center;
+	}
+    .albumDash {
+		display: block;
+	}
+	.coinClick {
+		min-width: 200px;
+	}
+}
