@@ -1,8 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-
-<link rel="stylesheet" type="text/css" href="css/customZajc.css">
+<script type="text/javascript">
+/*   $(function() {
+      $('#example').barrating({
+        theme: 'fontawesome-stars'
+      });
+   });*/
+</script>
 <script>
 
 // When the user scrolls down 20px from the top of the document, show the button
@@ -122,8 +127,7 @@ $(function(){ //Ready handler
     });
 });
 </script>
-
-<div style="cursor: pointer;" onclick="topFunction()" id="myBtn" title="Go to top"><span class="glyphicon glyphicon-upload"></span></div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
 <div class="container">
     <div class="col-sm-3">
         <div class="row">
@@ -135,12 +139,12 @@ $(function(){ //Ready handler
                 </div>
                 <div class="row">
                     @if (Auth::user()->lat)
-                        <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
+                    <a roll="button" class="btn btn-link" href="{{ route('seeLocation') }}">See Location</a>
                     @else
-                        <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
+                    <a roll="button" class="btn btn-link" href="{{ route('goToLocation') }}">Add Location</a>
                     @endif
                 </div>
-                @if(Request::path() === 'profile')
+                @if(Request::path() === 'profile' || Request::path() === 'profile/sortYear' || Request::path() === 'profile/sortCountry' || Request::path() === 'profile/sortOwned')
                     <div class="row">
                         <button type="button" class="btn btn-primary" style="margin-top: 5px;" onclick="albumEditButton()">Edit Album</button></div>
                     <div class="row">
@@ -161,7 +165,17 @@ $(function(){ //Ready handler
     </div>
     <div class="col-sm-9">
         <div id="profileTitle" class="row">
-            <h2>Album</h2>
+            <div class="col-sm-8">
+                <h2>Album</h2>
+            </div>
+            <div class="col-sm-4">
+                <div class="row">
+                Sort by
+                <a roll="button" class="btn btn-link" href="{{ route('sortByYear') }}">Year</a>
+                <a roll="button" class="btn btn-link" href="{{ route('sortByCountry') }}">Country</a>
+                <a roll="button" class="btn btn-link" href="{{ route('sortByOwned') }}">Owned</a>                        
+                </div>
+            </div>
         </div>
         <div class="col-sm-12">
             <?php $var = 0 ?>
@@ -183,9 +197,9 @@ $(function(){ //Ready handler
                             @endforeach
 
                             @if($userHasCoin === 'true')
-                                <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 1">
+                                <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 1; max-height: 155px; max-width: 155px">
                             @else
-                                <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 0.2">
+                                <img src="http://www.coin-database.com{{ $coin->img }}" alt="Failed to load img" style="opacity: 0.2; max-height: 155px; max-width: 155px">
                             @endif
 
                             <div class="thumbnailheader" style="text-align: center; display: block; text-overflow: ellipsis; word-wrap: break-word; overflow: hidden; height: 3.6em; line-height: 1.8em;">{{ $coin->description }}</div>
@@ -197,7 +211,7 @@ $(function(){ //Ready handler
                         </div>
                         <div>
                             <div class="input-group">
-                                @if(Request::path() === 'profile' || Request::path() === 'addProfile')
+                                @if(Request::path() === 'profile' || Request::path() === 'profile/sortYear' || Request::path() === 'profile/sortCountry' || Request::path() === 'profile/sortOwned')
                                     <span class="input-group-btn" id="spanMinus">
                                         <button type="button" class="btn btn-danger btn-number"  data-type="minus" data-field="quant[{{ $coin->id }}]">
                                             <span class="glyphicon glyphicon-minus"></span>
@@ -209,8 +223,7 @@ $(function(){ //Ready handler
                                 @else
                                     <input type="text" name="quant[{{ $coin->id }}]" readonly="readonly" class="form-control input-number" value="1" min="1" max="100" id="inputNumber">
                                 @endif
-
-                                @if(Request::path() === 'profile')
+                                @if(Request::path() === 'profile' || Request::path() === 'profile/sortYear' || Request::path() === 'profile/sortCountry' || Request::path() === 'profile/sortOwned')
                                     <span class="input-group-btn" id="spanPlus">
                                         <button type="button" class="btn btn-primary btn-number" data-type="plus" data-field="quant[{{ $coin->id }}]">
                                             <span class="glyphicon glyphicon-plus"></span>
